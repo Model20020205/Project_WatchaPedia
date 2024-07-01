@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>1:1채팅 메인페이지(종료됨 + 마감됨)</title>
+	<link rel="stylesheet" href="Project_Chat_user_main2.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			$("#div_채팅_logo_button").click(function(){
+				window.location.href = "https://admin.shopify.com/store/4ad3e2-bb/";
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="div_main_box1" class="border">
+<!-- 메인 밑부터 시작 -->	
+		<div id="div_main_inner1">
+			<div id="div_main_small_inner1" class="border">
+				<div id="div_logo" class="border">
+					<img id="div_채팅_logo_button" src="img/Chat_채팅로고.png">
+					<select id="SPIGEN_box" name="SPIGEN">
+						<option value="">SPIGEN</option>
+					</select>
+					<button id="div_logo2"><img src="img/Chat_search.jpg"></button>
+				</div>
+				<div id="div_content_box1">
+					<div id="div_small_content_box1">
+						<img id="Chat_진행중_logo" src="img/Chat_진행중.jpg">
+						<div id="div_진행중_text">진행 중</div>
+					</div>
+					<div id="div_small_content_box2">
+						<img id="Chat_종료됨_logo" src="img/Chat_종료됨.jpg">
+						<div id="div_종료됨_text">종료됨</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<!-- 1번 째 영역 -->		
+		
+		<div id="div_main_inner2">
+			<div id="div_main_text1">대화를 선택하여 봅니다.</div>
+			<div id="div_열림_box" class="border">
+				<div id="div_열림">마감됨</div>
+			</div>
+			<div id="div_채팅방목록_box1" class="border">
+				<div id="div_채팅방_box1">
+					<div id="Chat_채팅방_logo_box1"><img id="Chat_채팅방_logo" src="img/Chat_마감됨.png"></div>
+					<div id="div_채팅자이름_box1">환 김</div>
+					<div id="div_채팅날짜_box1">수요일</div>
+					<div id="div_채팅내용_box1">김환님이 이 대화를 닫았습니다.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>메타객체_스토어 세부 정보_프로필 편집</title>
+	<link rel="stylesheet" href="Project_meta_profile_edit.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			$("#div_revoke_button1").click(function(){
+				window.history.back();
+			});
+			$("#div_X_button").click(function(){
+				window.history.back();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="div_profile_box1" class="border">
+		<div id="div_profile_top_box1" class="border">
+			<div id="div_profile_edit_box1">프로필 편집</div>
+			<button id="div_X_button">x</button>
+		</div>
+		<div id="div_profile_top_box2" class="border">
+			<div id="div_profile_text_box1">
+				이 세부 정보는 공개될 수 있습니다. 개인 정보를 사용하지 마세요.
+			</div>
+			<div id="div_store_name_input1">
+				스토어 이름 <br/>
+				<input type="text" value="" id="div_input_edit1">
+				<div id="div_profile_info_text1">웹사이트에 표시됩니다.</div>
+			</div>
+			<div id="div_store_name_input2">
+				스토어 전화번호 <br/>
+				<input type="text" value="" id="div_input_edit2">
+			</div>
+			<div id="div_profile_down_box1">
+				<div id="div_store_email">스토어 이메일</div>
+				<input type="text" value="" id="div_input_edit3">
+				<span id="div_email_text">
+					스토어에 대한 메시지를 받습니다. 발신자 이메일의 경우 
+					<span id="div_text_edit1">
+						알림 설정
+					</span>
+					(으)로 이동하십시오.
+				</span>
+			</div>
+		</div>
+		<div id="div_profile_top_box3" class="border">
+			<input type="button" value="저장" id="div_revoke_button2">			
+			<input type="button" value="취소" id="div_revoke_button1">
+		</div>
+	</div>
+</body>
+</html>

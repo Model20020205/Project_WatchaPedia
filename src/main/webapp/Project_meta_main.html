@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>메타객체_메인페이지</title>
+	<link rel="stylesheet" href="Project_meta_main.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			// 프로필창 열기
+			$("#div_profile_edit").click(function(){
+				$("#div_프로필창_open").css("display", "flex");
+			});
+			// 프로필창 열기 (기존 메인페이지 반투명)
+			$("#div_revoke_button1").click(function(){
+				$("#div_프로필창_open").css("display", "none");
+			});
+			// 소유권양도창 열기
+			$("#div_store_user2").click(function(){
+				$("#div_소유권양도창_open").css("display", "flex");
+			});
+			// 소유권양도창 닫기
+			$("#div_revoke_box1").click(function(){
+				$("#div_소유권양도창_open").css("display", "none");
+			});
+			// 프로필편집창 닫기 및 이전페이지 이동
+			$("#div_revoke_button1").click(function(){
+				window.history.back();
+			});
+			// 매타객체 최상단 좌측 쇼피파이 로고 클릭 시 메인페이지 이동
+			$("#div_shopify_logo").click(function(){
+				window.location.href = "https://admin.shopify.com/store/4ad3e2-bb";
+			});
+			// 메타객체창 닫기 + 메인페이지 이동
+			$("#div_X_logo").click(function(){
+				window.location.href = "https://admin.shopify.com/store/4ad3e2-bb/content/metaobjects";
+			});
+			// 최상단 가운데 검색창 버튼 클릭 시 검색창 생성
+			$("#div_search_button_box2").click(function(){
+				$("#div_search_box").show();
+			});
+			// 최상단 가운데 생성된 검색창 닫기 X버튼
+			$("#div_search_close_button").click(function(){
+				$("#div_search_box").hide();
+			});
+			// 최상단 벨 클릭 시 창 생성
+			$("#div_shopify_bell").click(function(){
+				$("#div_post_box").show();
+			});
+			// 최상단 벨 닫기
+			$("#div_out_button").click(function(){
+				$("#div_post_box").hide();
+			});
+			// 최상단 우측 슈피겐 로고 클릭 시 창 생성
+			$("#div_shopify_logo2").click(function(){
+				$("#div_post_box2").css("display", "block");
+			});
+			// 최상단 우측 슈피겐 로고 클릭 시 창 닫기
+			$("#div_post_small_box1_out").click(function(){
+				$("#div_post_box2").css("display", "none");
+			});
+		});
+	</script>
+</head>
+<body style="overflow:hidden">
+	<div>
+	<div id="div_header1">
+		<div id="div_shopify_logo"><img src="img/sp home.png"/></div>
+		<div id="div_search_button_box">
+			<button id="div_search_button_box2">
+				<span id="div_search_box_content1"><img src="img/meta_search_box.png"></span>
+				<span id="div_search_box_content2">
+					검색
+				</span>
+				<span id="div_search_box_content3">
+					Ctrl K
+				</span>
+			</button>
+		</div>
+		<div id="div_shopify_logo2"><img src="img/SPIGEN_logo2.png"></div>
+		<div id="div_shopify_bell"><img src="img/shopify_bell.png"></div>
+		<div id="div_post_box" class="border">
+			<div id="div_post_box_text1">알림</div>
+			<img id="div_out_button" src="img/meta_X_logo.png">
+			<img id="div_post_box_photo2" src="img/meta_상단바_알림2.png">
+			<img id="div_post_box_photo1" src="img/meta_상단바_알림.png">
+			<div id="div_post_box_text2">스토어 및 계정에 대한 알림이 여기에 표시됩니다.</div>
+		</div>
+		<div id="div_search_box">
+			<div id="div_search_input_box" class="border">
+				<img id="div_search_input_img" src="img/Chat_search.jpg">
+				<input type="text" id="div_search_input_real_box" >
+			</div>
+			<button id="div_search_close_button">X</button>
+			<div id="div_카테고리_box1">
+				<button id="카테고리1">
+					<span>앱</span>
+				</button>
+				<button id="카테고리2">
+					<span>고객</span>
+				</button>
+				<button id="카테고리2">
+					<span>주문</span>
+				</button>
+				<button id="카테고리2">
+					<span>제품</span>
+				</button>
+				<button id="카테고리3">
+					<span>판매 채널</span>
+				</button>
+			</div>
+			<div id="div_big_glass_logo">
+				<img id="div_big_glass" src="img/meta_big_glass.png">
+				<div id="div_glass_text">SPIGEN에서 검색</div>
+			</div>
+			</div>
+		</div>
+		<div id="div_post_box2">
+			<div id="div_post_small_box1">
+				<span id="div_post_small_box1_name">
+					김환
+				</span>
+				<button id="div_post_small_box1_out">
+					<img id="div_post_small_box1_out_logo" src="img/meta_X_logo.png">
+				</button>
+				<span id="div_post_small_box1_email">
+					kimhwan0205@naver.com
+				</span>
+			</div>
+			<div id="div_post_small_box2">
+				<span id="div_post_small_box2_text">
+					계정 관리
+				</span>
+			</div>
+			<div id="div_post_small_box3">
+				<span id="div_post_small_box2_text">
+					로그아웃
+				</span>
+			</div>
+		</div>
+	<div id="div_small_header1"></div>
+	<div id="div_content1">
+		<div id="div_tle"> 
+			<div id="div_header2">
+				<div id="div_preference"><img src="img/meta_preference_logo.png"></div>
+				<div id="div_X_logo">
+					<img src="img/meta_X_logo.png">
+				</div>
+			</div>
+			<div id="div_content2">
+				<div id="div_setting_scroll"></div>
+				<div id="div_setting_box1">
+					<div id="div_spigen_logo_box1">
+						<img src="img/SPIGEN_logo1.png">
+						<div id="div_spigen_name1">SPIGEN</div> <br/>
+						<div id="div_spigen_name2">4ad3e2-bb.myshopify.com</div>
+					</div>
+					<div id="div_nav_box1">
+						<div id="div_nav_title1">
+							<div id="div_nav_title1">
+								<img src="img/meta_store_detail.png">
+								<div id="div_nav_content1">스토어 세부 정보</div>
+								</div>
+						</div>
+					</div>
+					<div id="div_nav_box2">
+						<div id="div_nav_title2">
+							<div id="div_nav_title2">
+								<img src="img/meta_userauthority_logo.png">
+								<div id="div_nav_content2">사용자 및 권한</div>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div id="div_setting_word1">스토어 세부 정보</div>
+				<div id="div_setting_word_box1" class="border">
+					<div id="div_setting_list">
+						<div id="div_setting_list1" class="border">
+							<div id="div_profile">
+								프로필
+							</div>
+							<div id="div_pen_logo">
+								<button id="div_profile_edit">
+									<img src="img/meta_setting_pen.png">
+								</button>
+							</div>
+						</div>
+						<div id="div_setting_list2" class="border">
+							<div id="div_store_logo"><img src="img/meta_store_logo.png"></div>
+							<div id="div_store_name">
+								스토어 이름
+							</div>
+							<div id="div_eng_name">
+								SPIGEN
+							</div>
+						</div>
+						<div id="div_setting_list3">
+							<div id="div_store_number_logo"><img src="img/meta_store_number.png"></div>
+							<div id="div_store_number2">
+								스토어 전화번호
+							</div>
+							<div id="div_store_number3">
+								11111111111
+							</div>
+						</div>
+						<div id="div_setting_list4">
+							<div id="div_store_email_logo"><img src="img/meta_store_email.png"></div>
+							<div id="div_store_email_title">
+								스토어 이메일
+							</div>
+							<div id="div_store_email_name">
+								kimhwan0205@naver.com
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="div_setting_word2">사용자 및 권한</div>
+				<div id="div_setting_word3">권한</div>
+				<div id="div_setting_word4">사용자가 스토어에서 보거나 수행할 수 있는 품목을 관리합니다.</div>
+				<div id="div_setting_word_box2" class="border">
+					<div id="div_store_user">스토어 소유자</div>
+					<div id="div_store_user2">소유권 양도</div>
+					<div id="div_store_info_box1">
+						<div id="div_store_info_logo"><img src="img/meta_store_info_logo.png"></div>
+						<div id="div_store_info_title">
+							김환
+						</div>
+						<div id="div_store_info_content1">
+							마지막 로그인 날짜: 2024년 5월 27일 월요일 오후 4:22 GMT+9
+						</div>
+					</div>
+					<div id="div_store_info_box2">
+						<div id="div_store_info_conetnt2">
+							참고 사항: 일부 소유자의 권한은 직원에게 할당할 수 없습니다.
+						</div>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+					<div style="clear:both"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- 프로필 편집 -->	
+	
+	<div id="div_프로필창_open">
+	<div id="div_프로필편집" class="borders">
+		<div id="div_profile_box1" class="border">
+		<div id="div_profile_top_box1" class="border">
+			<div id="div_profile_edit_box1">프로필 편집</div>
+		</div>
+		<div id="div_profile_top_box2" class="border">
+			<div id="div_profile_text_box1">
+				이 세부 정보는 공개될 수 있습니다. 개인 정보를 사용하지 마세요.
+			</div>
+			<div id="div_store_name_input1">
+				스토어 이름 <br/>
+				<input type="text" value="" id="div_input_edit1">
+				<div id="div_profile_info_text1">웹사이트에 표시됩니다.</div>
+			</div>
+			<div id="div_store_name_input2">
+				스토어 전화번호 <br/>
+				<input type="text" value="" id="div_input_edit2">
+			</div>
+			<div id="div_profile_down_box1">
+				<div id="div_store_email">스토어 이메일</div>
+				<input type="text" value="" id="div_input_edit3">
+				<span id="div_email_text">
+					스토어에 대한 메시지를 받습니다. 발신자 이메일의 경우 
+					<span id="div_text_edit1">
+						알림 설정
+					</span>
+					(으)로 이동하십시오.
+				</span>
+			</div>
+		</div>
+		<div id="div_profile_top_box3" class="border">
+			<input type="button" value="저장" id="div_revoke_button2">			
+			<input type="button" value="취소" id="div_revoke_button1">
+		</div>
+		</div>
+	</div>
+	</div>
+	
+<!-- 소유권 양도 -->	
+	<div id="div_소유권양도창_open">
+			<div id="div_ownership_box1">
+		<div id="div_ownership_small_box1" class="border">
+			<div id="div_text_box1">스토어 소유권 양도</div>
+		</div>
+		<div id="div_ownership_small_box2">
+			<div id="div_text_small_box1">
+				<svg id="svg_box" viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M10 6.75a.75.75 0 0 1 .75.75v3.5a.75.75 0 1 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Z"></path><path d="M11 13.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path><path fill-rule="evenodd" d="M10 3.5c-1.045 0-1.784.702-2.152 1.447a449.26 449.26 0 0 1-2.005 3.847l-.028.052a403.426 403.426 0 0 0-2.008 3.856c-.372.752-.478 1.75.093 2.614.57.863 1.542 1.184 2.464 1.184h7.272c.922 0 1.895-.32 2.464-1.184.57-.864.465-1.862.093-2.614-.21-.424-1.113-2.147-2.004-3.847l-.032-.061a429.497 429.497 0 0 1-2.005-3.847c-.368-.745-1.107-1.447-2.152-1.447Zm-.808 2.112c.404-.816 1.212-.816 1.616 0 .202.409 1.112 2.145 2.022 3.88a418.904 418.904 0 0 1 2.018 3.875c.404.817 0 1.633-1.212 1.633h-7.272c-1.212 0-1.617-.816-1.212-1.633.202-.408 1.113-2.147 2.023-3.883a421.932 421.932 0 0 0 2.017-3.872Z"></path></svg>
+				<div id="div_text1">새 스토어 소유자가 초대를 수락하면 회원님은 스토어에서 제거됩니다.</div>
+			</div>
+			<div id="div_text_box2">
+				새 스토어 소유자는 다음의 작업이 가능합니다.
+				<li id="li_text1">
+					스토어에서 사용자 제거 또는 권한 변경
+				</li>
+				<li id="li_text2">
+					신용 카드 및 뱅킹 정보 보기 또는 편집
+				</li>
+				<li id="li_text3">
+					스토어 일시 중지 또는 폐쇄
+				</li>
+				<div id="div_text_box3">
+					새 스토어 소유자
+				</div>
+				<div id="div_email_box1">
+					<div id="div_email_small_box1">이메일</div>
+					<input id="div_email_small_box2" type="text"></input>
+				</div>
+				<div id="div_name_title">
+					이름
+					<br/>
+					<input id="div_name_box" type="text">
+				</div>
+			</div>
+		</div>
+		<div id="div_ownership_small_box3">
+			<div id="div_button_box1">
+				<button id="div_ownership_alter">스토어 소유권 양도</button>
+				<button id="div_revoke_box1">취소</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

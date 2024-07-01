@@ -1,0 +1,154 @@
+@charset "UTF-8";
+.border {
+	border: 1px solid red;
+}
+* { box-sizing: border-box; }
+body{
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#div_profile_box1 {
+	width: 620px;
+	height: 358px;
+	border-radius: 15px;
+	border: 1px solid gainsboro;
+}
+#div_profile_top_box1 {
+	width: 620px;
+	height: 53px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-left: -1px;
+	margin-top: -1px;
+	background-color:  rgba(241, 241, 241, 1);
+	border: 1px solid gainsboro;
+}
+#div_profile_top_box2 {
+	width: 620px;
+	height: 244px;
+	margin-left: -1px;
+	margin-top: -1px;
+	background-color: white;
+	border: 1px solid gainsboro;
+}
+#div_profile_top_box3 {
+	width: 620px;
+	height: 63px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	margin-left: -1px;
+	margin-top: -1px;
+	border: 1px solid gainsboro;
+}
+#div_profile_edit_box1 {
+	width: 100px;
+	float: left;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-left: 15px;
+	font-size: 13.5px;
+	font-weight: bold;
+}
+
+#div_X_button {
+	float: right;
+	border: none;
+	margin-top: 17px;
+	margin-right: 13px;
+}
+#div_profile_text_box1 {
+	width: 588px;
+	height: 20px;
+	margin-top: 11px;
+	font-size: 12.5px;
+	margin-left: 12px;
+}
+#div_store_name_input1 {
+	width: 288px;
+	height: 80px;
+	float: left;
+	margin-top: 15px;
+	font-size: 12.5px;
+	margin-left: 15px;	
+}
+#div_input_edit1 {
+	width: 288px;
+	height: 32px;
+	margin-top: 5px;
+	border-radius: 8px;
+	border-width: 1px;
+}
+#div_store_name_input2 {
+	width: 288px;
+	height: 80px;
+	float: right;
+	margin-top: 15px;
+	font-size: 12.5px;
+	margin-right: 15px;
+}
+#div_input_edit2 {
+	width: 288px;
+	height: 32px;
+	margin-top: 5px;
+	border-radius: 8px;
+	border-width: 1px;
+}
+#div_profile_info_text1 {
+	width: 150px;
+	height: 15px;
+	font-size: 12.5px;
+	margin-top: 7px;
+}
+#div_profile_down_box1 {
+	width: 588px;
+	height: 80px;
+	margin: 0 auto;
+	margin-top: 115px;
+}
+#div_store_email {
+	font-size: 12.5px;
+}
+#div_input_edit3 {
+	width: 588px;
+	height: 32px;
+	margin-left: -1px;
+	margin-top: 5px;
+	border-radius: 8px;
+	border-width: 1px;
+}
+#div_email_text {
+	width: 588px;
+	height: 20px;
+	font-size: 12.5px;
+	margin-top: 7px;
+}
+#div_text_edit1 {
+	color: #005BD3;
+	text-decoration: underline;
+	width: 51.3px;
+	height: 15px;
+}
+#div_revoke_button1 {
+	width: 48px;
+	height: 28px;
+	float: right;
+	margin-right: 11px;
+	margin-top: 15px;
+	border-radius: 8px;
+	border-color: rgba(241, 241, 241, 1);
+	cursor: pointer;
+}
+#div_revoke_button2 {
+	width: 48px;
+	height: 28px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 15px;
+	border-radius: 8px;
+	border-color: rgba(241, 241, 241, 1);
+	cursor: pointer;
+}

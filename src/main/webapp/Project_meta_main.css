@@ -1,0 +1,1000 @@
+@charset "UTF-8";
+* { box-sizing: border-box; }
+.border {
+	border: 1px solid red;
+}
+body {
+	margin: 0 auto;
+}
+.center {
+	margin: 0 auto;
+}
+#div_header1 {
+	width: 100%;
+	height: 56px;
+	background-color: black;
+}
+#div_shopify_logo {
+	width: 86px;
+	height: 34px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 8.5px;
+	cursor: pointer;
+}
+#div_shopify_logo2 {
+	width: 94.13px;
+	height: 32px;	
+	float: right;
+	margin-top: 6.7px;
+	margin-right: 23px;
+	cursor: pointer;
+	position: relative;
+}
+#div_post_box {
+	width: 380px;
+	height: 119px;
+	background-color: white;
+	float: left;
+	z-index: 20000;
+	margin-top: 60px;
+	margin-left: 1415px;
+	position: fixed;
+	display: none;
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: #ddd;
+}
+#div_post_box2 {
+	width: 300px;
+	height: 180px;
+	position: absolute;
+	right: 21px;
+	display: none;
+	z-index: 19001;
+	background-color: white;
+	border-radius: 10px;
+	border-width: 1px;
+	border: 1px solid #ddd;
+}
+#div_post_small_box1 {
+	width: 280px;
+	height: 50px;
+	margin-left: 10px;
+	margin-top: 8px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+}
+#div_post_small_box1_name {
+	font-weight: bold;
+	font-size: 14px;
+}
+#div_post_small_box1_out {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border: none;
+	position: absolute;
+	right: 5px;
+	margin-top: -45px;
+	cursor: pointer;
+}
+#div_post_small_box1_out_logo {
+	width: 18px;
+	height: 16px;
+}
+#div_post_small_box1_email {
+	font-size: 12.5px;
+}
+#div_post_small_box2 {
+	width: 280px;
+	height: 50px;
+	margin-left: 10px;
+	margin-top: 8px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+}
+#div_post_small_box2_text {
+	font-size: 12.5px;
+}
+#div_post_small_box3 {
+	width: 280px;
+	height: 50px;
+	margin-left: 10px;
+	margin-top: 8px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+}
+#div_post_small_box2_text {
+	font-size: 12.5px;
+}
+#div_post_box_text1 {
+	width: 100px;
+	height: 20px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 7px;
+	font-size: 13px;
+	font-weight: bold;
+}
+#div_out_button {
+	float: right;
+	margin-right: 7px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+#div_post_box_photo1{
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+#div_post_box_photo2{
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+#div_post_box_text2 {
+	width: 285px;
+	height: 20px;
+	float: left;
+	margin-top: 40px;
+	margin-left: 56px;
+	font-size: 12.5px;
+	color: black;
+	opacity: 0.5;
+}
+#div_shopify_bell {
+	width: 32px;
+	height: 32px;
+	float: right;
+	margin-top: 12px;
+	margin-right: 6px;
+	cursor: pointer;
+	position: relative;
+}
+#div_search_button_box {
+	width: 500px;
+	height: 40px;
+	float: left;
+	margin-left: 622px;
+	margin-top: 13px;
+}
+#div_search_box {
+	width: 648px;
+	height: 250px;
+	background-color: white;
+	border-radius: 10px;
+	border: solid rgb(181, 181, 181, 1);
+	border-width: 1px;
+	z-index: 10001;
+	position: fixed;
+	margin-left: 630px;
+	margin-top: 5px;
+	display: none;
+}
+#div_search_input_box {
+	width: 600px;
+	height: 32px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	border: 1px solid gainsboro;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+#div_search_input_img {
+	float: left;
+	margin-left: -400px;
+	z-index: 10000;
+}
+#div_search_input_real_box {
+	width: 570px;
+	height: 30px;
+	float: right;
+	margin-right: -408px;
+	border: none;
+	border-radius: 10px;
+}
+#div_search_close_button {
+	float: right;
+	margin-right: 4px;
+	margin-top: -26px;
+	background-color: white;
+	border: none;
+	cursor: pointer;
+}
+#카테고리1 {
+	width: 24px;
+	height: 20px;
+	float: left;
+	font-size: 11px;
+	margin-left: 20px;
+	margin-top: 10px;
+	border-radius: 6px;
+	border: none;
+	background-color: #E3E3E3;
+	cursor: pointer;
+}
+#카테고리2 {
+	width: 40px;
+	height: 20px;
+	float: left;
+	font-size: 11px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 8px;
+	border: none;
+	background-color: #E3E3E3;
+	cursor: pointer;
+}
+#카테고리3 {
+	width: 67px;
+	height: 20px;
+	float: left;
+	font-size: 11px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 8px;
+	border: none;
+	background-color: #E3E3E3;
+	cursor: pointer;
+}
+#div_big_glass_logo {
+	width: 648px;
+	height: 100px;
+	margin-left: -1px;
+	margin-top: 74px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#div_big_glass {
+	width: 60px;
+	height: 60px;
+}
+#div_glass_text {
+	width: 150px;
+	height: 20px;
+	margin-top: 12px;
+	font-size: 15px;
+	font-family: sans-serif;
+	text-align: center;
+}
+#div_search_button_box2 {
+	width: 480px;
+	height: 32px;
+	border-radius: 8px;
+	background-color: #303030;
+	border: 1px solid rgb(181, 181, 181, 1);
+	cursor: pointer;
+}
+#div_search_box_content1 > img {
+	margin-top: 1px;
+	float: left;
+	margin-left: 1px;
+}
+#div_search_box_content2 {
+	float: left;
+	margin-left: 1px;
+	margin-top: 1px;
+	color: rgb(181, 181, 181, 1);
+}
+#div_search_box_content3 {
+	float: right;
+	margin-right: 1px;
+	margin-top: 3px;
+	color: rgb(181, 181, 181, 1);
+}
+#div_small_header1 {
+	width: 100%;
+	height: 9px;
+	background-color: rgba(138, 138, 138, 1);
+}
+#div_content1 {
+	width: 100%;
+	height: 100%;
+	margin-top: -11px;
+	background-color: rgba(138, 138, 138, 1);
+}
+#div_tle {
+	width: 99%;
+	height: 100%;
+	margin: 0 auto;
+}
+#div_tle > div:nth-child(1) {
+	margin-top: 8px;
+	width: 100%;
+	height: 49px;
+	position: relative;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	background-color: white;
+	border-bottom: 1px solid #bbb;
+}
+#div_tle > div:nth-child(2) {
+	width: 100%;
+	height: 840px;
+	margin-top: 0px;
+	background-color: rgba(241, 241, 241, 1);
+}
+#div_header2 > div:nth-child(1) {
+	margin-top: 13px;
+	margin-left: 10px;
+	float: left;
+}
+#div_X_logo {
+	width: 23px;
+	height: 23px;
+	float: right;
+	margin-top: 5px;
+	margin-right: 3px;
+	cursor: pointer;
+}
+#div_meta_X_logo_button {
+	width: 20px;
+	height: 20px;
+	position: relative;
+}
+#div_content2 > div:nth-child(1) {
+	width: 14px;
+	height: 840px;
+	margin-right: 3px;
+	float: right;
+}
+#div_content2 {
+	overflow-x: scroll;
+	overflow-y: scroll;
+}
+#div_setting_box1 {
+	width: 288px;
+	height: 788px;
+	margin-top: 35px;
+	margin-left: 439px;
+	border-radius: 10px;
+	float: left;
+	background-color: white;
+	border: 1px solid #ddd;
+}
+#div_nav_box1 {
+	width: 264px;
+	height: 28px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+#div_nav_title1 > img {
+	float: left;
+	width: 28px;
+	height: 25px;
+}
+#div_nav_content1 {
+	float: right;
+	margin: 0 auto;
+	margin-top: 4px;
+	margin-right: 124px;
+	font-size: 14px;
+	font-weight: bold;
+}
+#div_nav_box2 {
+	width: 264px;
+	height: 28px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+#div_nav_title2 > img {
+	float: left;
+	width: 22px;
+	height: 20px;
+	margin-left: 3px;
+	margin-top: 3px;
+}
+#div_nav_content2 {
+	float: right;
+	margin: 0 auto;
+	margin-top: 4px;
+	margin-right: 137px;
+	font-size: 14px;
+	font-weight: bold;
+}
+#div_setting_word1 {
+	width: 700px;
+	height: 40px;
+	float: left;
+	margin-left: 33px;
+	margin-top: 50px;
+	font-size: 22px;
+	font-weight: bold;
+}
+#div_setting_word3 {
+	width: 680px;
+	height: 20px;
+	font-size: 13.5px;
+	float: right;
+	margin-right: 429px;
+}
+#div_setting_word4 {
+	width: 680px;
+	height: 20px;
+	float: right;
+	font-size: 13.5px;
+	margin-right: 429px;
+	margin-top: 10px;
+}
+#div_spigen_logo_box1 {
+	width: 288px;
+	height: 64px;
+	margin-left: -1px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: rgba(243, 243, 243, 1);
+	border: 1px solid #ddd;
+}
+#div_spigen_logo_box1 > img {
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+	margin-top: 12px;
+	cursor: pointer;
+}
+#div_spigen_name1 {
+	float: right;
+	margin: 0 auto;
+	margin-right: 175px;
+	margin-top: 14px;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+#div_spigen_name2 {
+	width: 200px;
+	height: 16px;
+	margin-right: 28px;
+	margin-top: -23px;
+	float: right;
+	font-size: 12px;
+}
+#div_setting_word_box1 {
+	width: 700px;
+	height: 263px;
+	float: right;
+	background-color: white;
+	margin-right: 410px;
+	margin-top: 15px;
+	border-radius: 12px;
+	border: 1px solid #ddd;
+}
+#div_setting_list {
+	width: 668px;
+	height: 237px;
+	margin: 0 auto;
+	margin-left: 14px;
+	margin-top: 12px;
+	border-radius: 12px;
+	float: left;
+	border: 1px solid #ddd;
+}
+#div_profile_edit {
+	border: none;
+	background-color: rgba(243, 243, 243, 1);
+	cursor: pointer;
+}
+#div_setting_list > div:nth-child(1) {
+	width: 667px;
+	height: 44px;
+	margin-top: -2px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	background-color: rgba(243, 243, 243, 1);
+	border: 1px solid #ddd;
+}
+#div_profile {
+	font-size: 13.5px;
+	font-weight: bold;
+	float: left;
+	padding-top: 12px;
+	margin-left: 8px;
+}
+#div_pen_logo {
+	float: right;
+	padding-top: 10px;
+	margin-right: 8px;
+	cursor: pointer;
+}
+#div_setting_list > div:nth-child(2) {
+	width: 667px;
+	height: 64px;
+	background-color: white;
+	border: 1px solid #ddd;
+}
+#div_store_logo > img{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-top: 18px;
+	margin-left: 9px;
+}
+#div_store_name {
+	margin-left: 40px;
+	padding-top: 13px;
+	font-size: 12.5px;
+}
+#div_eng_name {
+	margin-top: 6px;
+	margin-left: 40px;
+	font-size: 12.5px;
+}
+#div_setting_list > div:nth-child(3) {
+	width: 667px;
+	height: 64px;
+	background-color: white;
+	border: 1px solid #ddd;
+}
+#div_store_number_logo > img {
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-top: 18px;
+	margin-left: 9px;
+}
+#div_store_number2 {
+	margin-left: 40px;
+	padding-top: 13px;
+	font-size: 12.5px;
+}
+#div_store_number3 {
+	margin-top: 5px;
+	margin-left: 40px;
+	font-size: 12.5px;
+}
+#div_setting_list > div:nth-child(4) {
+	width: 667px;
+	height: 66px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	background-color: white;
+	border: 1px solid #ddd;
+}
+#div_store_email_logo > img {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-top: 18px;
+	margin-left: 9px;
+}
+#div_store_email_title {
+	margin-left: 40px;
+	padding-top: 13px;
+	font-size: 12.5px;
+}
+#div_store_email_name {
+	margin-left: 40px;
+	padding-top: 6px;
+	font-size: 12.5px;
+}
+#div_setting_word2 {
+	width: 700px;
+	height: 40px;
+	float: left;
+	margin-left: 33px;
+	margin-top: 30px;
+	font-size: 22px;
+	font-weight: bold;
+}
+#div_setting_word_box2 {
+	width: 700px;
+	height: 144px;
+	float: right;
+	background-color: white;
+	margin-right: 410px;
+	margin-top: 15px;
+	border-radius: 12px;
+	border: 1px solid #ddd;
+}
+#div_store_user {
+	width: 140px;
+	height: 36px;
+	float: left;
+	font-size: 13.5px;
+	font-weight: bold;
+	margin-left: 2px;
+	padding: 15px;
+}
+#div_store_user2 {
+	float: right;
+	font-size: 13.5px;
+	margin-right: 1px;
+	padding-right: 8px;
+	padding: 15px;
+	color: #005BD3;
+	cursor: pointer;
+}
+#div_store_info_box1 {
+	width: 684px;
+	height: 56px;
+	margin-top: 50px;
+}
+#div_store_info_logo {
+	margin-top: 15px;
+	margin-left: 15px;
+}
+#div_store_info_title {
+	margin-left: 60px;
+	margin-top: -38px;
+	font-size: 13.5px;
+	color: #005BD3;
+}
+#div_store_info_content1 {
+	margin-left: 60px;
+	font-size: 13.5px;
+}
+#div_store_info_box2 {
+	width: 700px;
+	height: 50px;
+	margin-top: -15px;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+#div_store_info_box2 {
+	margin-left: -1px;
+	background-color: rgba(243, 243, 243, 1);
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+#div_store_info_box2 > div:nth-child(1) {
+	display: flex;
+	text-align: center;
+	line-height: 48px;
+	font-size: 13.5px;
+	margin-left: 15px;
+}
+
+/* ↓ 프로필 편집창 ↓ */
+
+#div_프로필창_open {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background-color: #00000080;
+}
+#div_profile_box1 {
+	width: 620px;
+	height: 358px;
+	border-radius: 15px;
+	border: 1px solid gainsboro;
+}
+#div_profile_top_box1 {
+	width: 620px;
+	height: 53px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-left: -1px;
+	margin-top: -1px;
+	background-color:  rgba(241, 241, 241, 1);
+	border: 1px solid gainsboro;
+}
+#div_profile_top_box2 {
+	width: 620px;
+	height: 244px;
+	margin-left: -1px;
+	margin-top: -1px;
+	background-color: white;
+	border: 1px solid gainsboro;
+}
+#div_profile_top_box3 {
+	width: 620px;
+	height: 63px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	margin-left: -1px;
+	margin-top: -1px;
+	border: 1px solid gainsboro;
+	background-color: white;
+}
+#div_profile_edit_box1 {
+	width: 100px;
+	float: left;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-left: 15px;
+	font-size: 13.5px;
+	font-weight: bold;
+}
+
+#div_X_button {
+	float: right;
+	border: none;
+	margin-top: 17px;
+	margin-right: 13px;
+}
+#div_profile_text_box1 {
+	width: 588px;
+	height: 20px;
+	margin-top: 11px;
+	font-size: 12.5px;
+	margin-left: 12px;
+}
+#div_store_name_input1 {
+	width: 288px;
+	height: 80px;
+	float: left;
+	margin-top: 15px;
+	font-size: 12.5px;
+	margin-left: 15px;	
+}
+#div_input_edit1 {
+	width: 288px;
+	height: 32px;
+	margin-top: 5px;
+	border-radius: 8px;
+	border-width: 1px;
+}
+#div_store_name_input2 {
+	width: 288px;
+	height: 80px;
+	float: right;
+	margin-top: 15px;
+	font-size: 12.5px;
+	margin-right: 15px;
+}
+#div_input_edit2 {
+	width: 288px;
+	height: 32px;
+	margin-top: 5px;
+	border-radius: 8px;
+	border-width: 1px;
+}
+#div_profile_info_text1 {
+	width: 150px;
+	height: 15px;
+	font-size: 12.5px;
+	margin-top: 7px;
+}
+#div_profile_down_box1 {
+	width: 588px;
+	height: 80px;
+	margin: 0 auto;
+	margin-top: 115px;
+}
+#div_store_email {
+	font-size: 12.5px;
+}
+#div_input_edit3 {
+	width: 588px;
+	height: 32px;
+	margin-left: -1px;
+	margin-top: 5px;
+	border-radius: 8px;
+	border-width: 1px;
+}
+#div_email_text {
+	width: 588px;
+	height: 20px;
+	font-size: 12.5px;
+	margin-top: 7px;
+}
+#div_text_edit1 {
+	color: #005BD3;
+	text-decoration: underline;
+	width: 51.3px;
+	height: 15px;
+}
+#div_revoke_button1 {
+	width: 48px;
+	height: 28px;
+	float: right;
+	margin-right: 11px;
+	margin-top: 15px;
+	border-radius: 8px;
+	border-color: rgba(241, 241, 241, 1);
+	cursor: pointer;
+}
+#div_revoke_button2 {
+	width: 48px;
+	height: 28px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 15px;
+	border-radius: 8px;
+	border-color: rgba(241, 241, 241, 1);
+	cursor: pointer;
+}
+
+/* 소유권 양도 */
+#div_소유권양도창_open {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background-color: #00000080;
+}
+#div_ownership_box1 {
+	width: 620px;
+	height: 570px;
+	border-radius: 20px;
+}
+#div_ownership_small_box1 {
+	width: 620px;
+	height: 53px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	background-color:  rgba(241, 241, 241, 1);
+	border: 1px solid gainsboro;
+}
+#div_ownership_small_box2 {
+	width: 620px;
+	height: 456px;
+	border: 1px solid gainsboro;
+	background-color: white;
+	margin-top: -1px;
+}
+#div_ownership_small_box3 {
+	width: 620px;
+	height: 61px;
+	margin-top: -1px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border: 1px solid gainsboro;
+	background-color:  rgba(241, 241, 241, 1);
+}
+#div_text_box1 {
+	width: 552px;
+	height: 20px;
+	margin-top: 15px;
+	padding-left: 15px;
+	font-size: 15px;
+	font-weight: bold;
+}
+#div_X_button {
+	float: right;
+	border: none;
+	margin-top: -18px;
+	margin-right: 16px;
+	cursor: pointer;
+}
+#div_text_small_box1 {
+	width: 588px;
+	height: 36px;
+	background-color: rgba(255, 241, 227, 1);
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-top: 18px;
+}
+#svg_box {
+	width: 25px;
+	height: 25px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+#div_text1 {
+	float: right;
+	font-size: 14px;
+	margin-top: 8px;
+	margin-right: 108px;
+}
+#div_text_box2 {
+	width: 588px;
+	height: 140px;
+	margin: 0 auto;
+	margin-top: 14px;
+	font-size: 14px;
+}
+#li_text1 {
+	width: 568px;
+	height: 20px;
+	margin-top: 20px;
+	margin-left: 4px;
+}
+#li_text2 {
+	width: 568px;
+	height: 20px;
+	margin-top: 9px;
+	margin-left: 4px;
+}
+#li_text3 {
+	width: 568px;
+	height: 20px;
+	margin-top: 9px;
+	margin-left: 4px;
+}
+#div_text_box3 {
+	width: 588px;
+	height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 18px;
+}
+#div_email_box1 {
+	width: 588px;
+	height: 56px;
+}
+#div_email_small_box1 {
+	width: 588px;
+	height: 20px;
+	margin-top: 35px;
+	margin-bottom: 4px;
+}
+#div_email_small_box2 {
+	width: 588px;
+	height: 32px;
+	border-radius: 8px;
+	border-width: 1px;
+}
+#div_name_title {
+	width: 588px;
+	height: 56px;
+	font-size: 14px;
+	margin-top: 50px;
+}
+#div_name_box {
+	width: 588px;
+	height: 32px;
+	margin-top: 8px;
+	border-radius: 8px;
+	border-width: 1px;
+}
+#div_button_box1 {
+	width: 588px;
+	height: 28px;
+	margin: 0 auto;
+}
+#div_button_small_box1 {
+	width: 182.23px;
+	height: 40px;
+	float: right;
+}
+#div_revoke_box1 {
+	width: 48px;
+	height: 29px;
+	border-radius: 8px;
+	border-width: 0.5px;
+	font-size: 14px;
+	float: right;
+	margin-right: 8px;
+	margin-top: 15px;
+	background-color: rgb(255, 255, 255, 1);
+	border-color: rgba(204, 204, 204, 1);
+	cursor: pointer;
+}
+#div_ownership_alter {
+	width: 126.23px;
+	height: 29px;
+	border-radius: 8px;
+	border-width: 0.5px;
+	font-size: 12px;
+	float: right;
+	margin-top: 15px;
+	background-color: rgba(26, 26, 26, 1);
+	color: rgb(255, 255, 255, 1);
+	font-weight: bold;
+	cursor: pointer;
+}

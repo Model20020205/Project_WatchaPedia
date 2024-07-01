@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>1:1채팅 메인페이지(진행 중 + 열림)</title>
+	<link rel="stylesheet" href="Project_Chat_user_main.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			$("#div_채팅_logo_button").click(function(){
+				window.location.href = "https://admin.shopify.com/store/4ad3e2-bb/";
+			});
+			
+			$("#div_chatst_small_content_box2").click(function(){
+				$("#div_Chat_content_box1").css("display", "none");
+				$("#div_chatst_click_sentence").css("display", "flex");
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="div_chatst_main_box1" class="border">
+<!-- 메인 밑부터 시작 -->	
+		<div id="div_chatst_main_inner1">
+			<div id="div_chatst_main_small_inner1" class="border">
+				<div id="div_chatst_logo" class="border">
+					<img id="div_chatst_logo_button" src="img/Chat_채팅로고.png">
+					<select id="chatst_SPIGEN_box" name="SPIGEN">
+						<option value="">SPIGEN</option>
+					</select>
+					<button id="div_chatst_logo2"><img src="img/Chat_search.jpg"></button>
+				</div>
+				<div id="div_chatst_content_box1">
+					<div id="div_chatst_small_content_box1">
+						<img id="div_chatst_진행중_logo" src="img/Chat_진행중.jpg">
+						<div id="div_chatst_진행중_text">진행 중</div>
+					</div>
+					<div id="div_chatst_small_content_box2">
+						<img id="div_chatst_finish_logo" src="img/Chat_종료됨.jpg">
+						<div id="div_chatst_finish_text">종료됨</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<!-- 1번 째 영역 -->		
+		
+		<div id="div_chatst_main_inner2">
+			<div id="div_chatst_open_box" class="border">
+				<div id="div_chatst_open">열림</div>
+			</div>
+			<div id="div_chatst_list_box1" class="border">
+				<div id="div_chatst_room_box1">
+					<div id="div_chatst_room_logo_box1"><img id="Chat_채팅방_logo" src="img/Chat_열림.png"></div>
+					<div id="div_chatst_cusname_box1">환 김</div>
+					<div id="div_chatst_date_box1">5월 16</div>
+					<div id="div_chatst_chatcon_box1">제품 가격이 궁금해요</div>
+				</div>
+			</div>
+		</div>
+		
+<!-- 2번 째 영역 -->		
+		
+		<div id="div_Chat_content_box1">
+			<div id="div_chatst_click_sentence">
+				<span id="div_chatst_sentence">대화를 선택하여 봅니다.</span>
+			</div>
+			<div id="div_top_content_box1" class="border">
+				<div id="div_top_content1" class="border">
+					<div id="div_top_small_content1">환 김</div>
+					<div id="div_top_small_content2"><img src="img/Chat_꺽쇠.png"></div>
+					<div id="div_top_small_content3">고객</div>
+				</div>
+				<div id="div_top_content2">
+					<div id="div_button1"><img src="img/Chat_체크로고.png"></div>
+					<div id="div_button2"><img src="img/Chat_체크옆로고.png"></div>
+					<div id="div_button3"><img src="img/Chat_체크옆옆로고.png"></div>
+					<div id="div_button4"><img src="img/Chat_체크옆옆옆옆로고.png"></div>
+				</div>
+			</div>
+			<div id="div_middle_content_box2" class="border">
+				<div id="div_middle_content_small_box1" class="border">
+					<div id="div_middle_content_small_box1-1" class="border">
+						<img id="div_chatst_chatguide_img" src="img/Chat_채팅내용1.jpg">
+						<div id="div_chatst_chatguide_content1">온라인 스토어에서 대화가 시작되었습니다</div>
+						<div id="div_chatst_chatguide_content2">환 김님이 SPIGEN 페이지에서 메시지를 보냈습니다.</div>
+					</div>
+				</div>
+				<div id="div_middle_content_small_box2" class="border">
+					<div id="div_chatst_chatguide_content3">5월 16</div>
+					<div id="div_chatst_chatguide_content4">kimhwan0205@naver.com이(가) 기존 고객(환 김)과 일치합니다.</div>
+				</div>
+				<div id="div_middle_content_small_box3" class="border">
+					<img id="div_customer_img" src="img/내Chat_채팅내용2.png">
+					<div id="div_chatst_chatting_box1">
+						<div id="div_chatst_cuscon_box3-1">제품 가격이 궁금해요</div>
+						<div id="div_chatst_cuscon_box3-2">3:07 오후</div>
+					</div>
+				</div>
+				<div id="div_middle_content_small_box4" class="border">
+					<img id="div_user_img" src="img/Chat_판매자채팅자로고.png">
+					<div id="div_채팅_box2">
+						<div id="div_chatst_cuscon_box4-1">제품 가격은 저희 홈페이지에 보시면 있습니다.</div>
+						<div id="div_chatst_cuscon_box4-2">3:37 오후</div>
+					</div>
+				</div>
+				<div id="div_middle_content_small_box5" class="border">
+					<img id="div_customer_img" src="img/내Chat_채팅내용2.png">
+					<div id="div_chatst_chatting_box3">
+						<div id="div_chatst_cuscon_box5-1">아 네 알겠습니다.</div>
+						<div id="div_chatst_cuscon_box5-2">4:07 오후</div>
+					</div>
+				</div>
+				<div id="div_middle_content_small_box6" class="border">
+					<img id="div_user_img" src="img/Chat_판매자채팅자로고.png">
+					<div id="div_chatst_chatting_box2-1">
+						<div id="div_chatst_cuscon_box6-1">네 감사합니다. 좋은 하루 되세요!</div>
+						<div id="div_chatst_cuscon_box6-2">4:37 오후</div>
+					</div>
+				</div>
+				<div id="div_middle_content_small_box7" class="border">
+					<img id="div_customer_img" src="img/내Chat_채팅내용2.png">
+					<div id="div_chatst_chatting_box3">
+						<div id="div_chatst_cuscon_box7-1">네 감사합니다.</div>
+						<div id="div_chatst_cuscon_box7-2">4:47 오후</div>
+					</div>
+				</div>
+			</div>
+			<div id="div_input_box1">
+				<div id="div_input_small_box1" class="border">
+					<img src="img/Chat_이메일.png">
+					<input id="div_이메일_box1" type="text" placeholder="메시지 작성...">
+				</div>
+				<div id="div_input_small_box2" class="border">
+					<div id="div_input_img">
+						<button id="div_input_logo_button1">
+							<img id="div_input_logo1" src="img/Chat_채팅칸 로고1.png">
+						</button>
+						<button id="div_input_logo_button2">
+							<img id="div_input_logo2" src="img/Chat_채팅칸 로고2.png">
+						</button>
+						<button id="div_input_logo_button3">
+							<img id="div_input_logo3" src="img/Chat_채팅칸 로고3.png">
+						</button>
+						<button id="div_input_logo_button4">
+							<img id="div_input_logo4" src="img/Chat_채팅칸 로고4.png">
+						</button>
+					</div>
+					<input type="submit" id="div_이메일보내기버튼" value="이메일 보내기">
+				</div>
+				<div id="div_input_small_box3">
+					<span id="div_input_small_content1">설정을 편집합니다.</span>
+					<span id="div_input_small_content2">: 메시지를 보냅니다.</span>
+					<span id="div_input_small_content3">Ctrl + Enter</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
