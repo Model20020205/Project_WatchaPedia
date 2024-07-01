@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>메타객체_스토어 소유권 양도(사용자 및 권한)</title>
+	<link rel="stylesheet" href="Project_meta_transfer_ownership.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			$("#div_revoke_box1").click(function(){
+				window.history.back();
+			});
+			$("#div_X_button").click(function(){
+				window.history.back();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="div_ownership_box1">
+		<div id="div_ownership_small_box1" class="border">
+			<div id="div_text_box1">스토어 소유권 양도</div>
+			<button id="div_X_button">x</button>
+		</div>
+		<div id="div_ownership_small_box2">
+			<div id="div_text_small_box1">
+				<svg id="svg_box" viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M10 6.75a.75.75 0 0 1 .75.75v3.5a.75.75 0 1 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Z"></path><path d="M11 13.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path><path fill-rule="evenodd" d="M10 3.5c-1.045 0-1.784.702-2.152 1.447a449.26 449.26 0 0 1-2.005 3.847l-.028.052a403.426 403.426 0 0 0-2.008 3.856c-.372.752-.478 1.75.093 2.614.57.863 1.542 1.184 2.464 1.184h7.272c.922 0 1.895-.32 2.464-1.184.57-.864.465-1.862.093-2.614-.21-.424-1.113-2.147-2.004-3.847l-.032-.061a429.497 429.497 0 0 1-2.005-3.847c-.368-.745-1.107-1.447-2.152-1.447Zm-.808 2.112c.404-.816 1.212-.816 1.616 0 .202.409 1.112 2.145 2.022 3.88a418.904 418.904 0 0 1 2.018 3.875c.404.817 0 1.633-1.212 1.633h-7.272c-1.212 0-1.617-.816-1.212-1.633.202-.408 1.113-2.147 2.023-3.883a421.932 421.932 0 0 0 2.017-3.872Z"></path></svg>
+				<div id="div_text1">새 스토어 소유자가 초대를 수락하면 회원님은 스토어에서 제거됩니다.</div>
+			</div>
+			<div id="div_text_box2">
+				새 스토어 소유자는 다음의 작업이 가능합니다.
+				<li id="li_text1">
+					스토어에서 사용자 제거 또는 권한 변경
+				</li>
+				<li id="li_text2">
+					신용 카드 및 뱅킹 정보 보기 또는 편집
+				</li>
+				<li id="li_text3">
+					스토어 일시 중지 또는 폐쇄
+				</li>
+				<div id="div_text_box3">
+					새 스토어 소유자
+				</div>
+				<div id="div_email_box1">
+					<div id="div_email_small_box1">이메일</div>
+					<input id="div_email_small_box2" type="text"></input>
+				</div>
+				<div id="div_name_title">
+					이름
+					<br/>
+					<input id="div_name_box" type="text">
+				</div>
+			</div>
+		</div>
+		<div id="div_ownership_small_box3">
+			<div id="div_button_box1">
+				<button id="div_ownership_alter">스토어 소유권 양도</button>
+				<button id="div_revoke_box1">취소</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

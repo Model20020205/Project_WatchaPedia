@@ -1,0 +1,1438 @@
+@charset "UTF-8";
+* { box-sizing: border-box; }
+.border {
+	border: 1px solid red;
+}
+body {
+	overflow-y: hidden;
+	margin: 0;
+}
+#chatting_main_screen {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+}
+#chatting_middle_screen1 {
+	width: 260px;
+	height: 945px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#chatting_small_box1 {
+	width: 235px;
+	height: 30px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: center;
+}
+#chatting_small_box1-1 {
+	width: 168px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #ddd;
+	border-width: 1px;
+	color: rgb(48, 48, 48);
+	font-family: Inter;
+	font-size: 12px;
+	font-weight: 650;
+	margin-left: 8px;
+	margin-right: 8px;
+	line-height: 16px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+#chatting_small_box1-1_text {
+	margin-left: 8px;
+}
+#small_box1-1_box1 {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+	cursor: pointer;	
+}
+#chatting_small_box1-1_button {
+	width: 30px;
+	height: 30px;
+}
+#chatting_small_box2 {
+	width: 235px;
+	height: 68px;
+}
+#chatting_small_box2-1 {
+	width: 235px;
+	height: 28px;
+	margin-top: 2px;
+	margin-bottom: 4px;
+	margin-left: -1px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
+#chatting_small_box2-1:hover {
+	background-color: #f1f1f1;
+}
+#chatting_small_box2_img {
+	margin-left: 5px;
+}
+#chatting_small_box2_text {
+	margin-left: 5px;
+}
+#chatting_small_box2-2 {
+	width: 235px;
+	height: 28px;
+	margin-top: 2px;
+	margin-bottom: 4px;
+	margin-left: -1px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+}
+#chatting_small_box2_img {
+	cursor: pointer;
+}
+#chatting_small_box2-2:hover {
+	background-color: #f1f1f1;
+}
+#chatting_middle_screen2 {
+	width: 1660px;
+	height: 945px;
+	display: flex;
+	flex-direction: row;
+}
+#chatting_middle_screen2-1 {
+	width: 360px;
+	height: 960px;
+	border: 1px solid #ddd;
+	margin-top: -1px;
+}
+#chatting_middle_screen2_box0 {
+	width: 360px;
+	height: 57px;
+	margin-left: -1px;
+	display: none;
+    align-items: center;
+    border: 1px solid #ddd;
+    margin-top: -2px;
+}
+#chatting_middle_screen2_box0_text {
+	margin-left: 14px;
+	font-size: 14px;
+	font-weight: bold;
+}
+#chatting_middle_screen2_box1 {
+	width: 360px;
+	height: 57px;
+	margin-left: -1px;
+	display: flex;
+	align-items: center;
+	border: 1px solid #ddd;
+	margin-top: -2px;
+}
+#chatting_middle_screen2_box1_text {
+	margin-left: 14px;
+	font-size: 14px;
+	font-weight: bold;
+}
+#chatting_middle_screen2_box2 {
+	width: 360px;
+	height: 68px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+#chatting_middle_screen2_box2_text {
+	width: 328px;
+	height: 44px;
+	display: flex;
+}
+#chatting_check_img {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+}
+#chatting_list_text_box {
+	width: 130px;
+	height: 44px;
+	margin-left: 5px;
+}
+#chatting_middle_screen2_box2_name {
+	font-size: 13px;
+	font-weight: bold;
+}
+#chatting_middle_screen2_box2_content {
+	font-size: 13px;
+	margin-top: 5px;
+}
+#chatting_middle_screen2_date_box {
+	width: 174px;
+	height: 44px;
+}
+#chatting_middle_screen2_box2_date {
+	width: 50px;
+	height: 23px;
+	float: right;
+	font-size: 11px;
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-end;
+}
+#chatting_select_text_box {
+	width: 1512.34px;
+	height: 1058.89px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+}
+#chatting_middle_screen2-2 {
+	width: 1299px;
+	height: 945px;
+	display: none;
+}
+#chatting_middle_screen2-2_text_box1 {
+	width: 1299px;
+	height: 57px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ddd;
+	margin-top: -2px;
+	margin-left: -1px;
+}
+#chatting_middle_screen2-2_text1-1 {
+	width: 1279px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#chatting_middle_screen2-2_top_text {
+	width: 59.38px;
+	height: 46px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#chatting_middle_screen2-2_top_small_text1 {
+	width: 55px;
+	height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	display: flex;
+	cursor: pointer;
+}
+#chatting_middle_screen2-2_top_small_text2 {
+	width: 55px;
+	height: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #6b7177;
+}
+#chatting_middle_screen2-2_top_img {
+	width: 134px;
+	height: 32px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#middle_screen2_img1 {
+	cursor: pointer;
+}
+#middle_screen2_img2 {
+	cursor: pointer;
+}
+#middle_screen2_img3 {
+	cursor: pointer;
+}
+#middle_screen2_img4 {
+	cursor: pointer;
+}
+#chatting_middle_screen2-2_text_box2 {
+	width: 1299px;
+	height: 749px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#chatting_middle_screen2-2_chat_box1 {
+	width: 1299px;
+	height: 152px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_content1 {
+	width: 383.89px;
+	height: 152px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+#chatting_content1_box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#chatting_content1_img {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_content1-1 {
+	width: 270px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 12px;
+	font-size: 14px;
+	font-weight: 650;
+	color: rgb(48, 48, 48);
+}
+#chatting_content1-2 {
+	width: 370px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4px;
+	font-size: 13px;
+	color: rgb(97, 97, 97);
+}
+#chatting_middle_screen2-3_chat_box1 {
+	width: 1299px;
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+#chatting_content2-1 {
+	width: 1299px;
+	height: 16px;
+	color: rgb(97, 97, 97);
+	font-size: 12px;
+	font-weight: 650;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_content2-2 {
+	width: 1299px;
+	height: 32px;
+	color: #6B7177;
+	font-size: 12px;
+	font-family: sans-serif;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* --------------------------------------- */
+
+
+#chatting_middle_screen2-3_chat_box2 {
+	width: 1299px;
+	height: 86px;
+}
+#chatting_middle_screen2-3_chat_small_box1 {
+	width: 1299px;
+	height: 74px;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: row;
+	padding-left: 17px;
+    padding-right: 17px;
+}
+#chatting_small_box_img1-1 {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_middle_screen2-3_chat_content_box1 {
+	max-width: 45%;
+	height: 74px;
+	margin-left: 8px;
+	border-radius: 24px;
+	background-color: rgb(243, 243, 243);
+	border-color: rgb(243, 243, 243);
+	border-width: 1px;
+}
+#chatting_content3-1 {
+	width: 158.11px;
+	height: 44px;
+	font-size: 13px;
+	color: #303030;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#chatting_div3-1 {
+	margin-left: 8px;
+}
+#chatting_content3-2 {
+	width: 158.11;
+	height: 28px;
+	font-size: 12px;
+	font-weight: 500;
+	font-family: sans-serif;
+	color: #616161;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#chatting_div3-2 {
+	margin-left: 8px;
+}
+#chatting_middle_screen2-3_chat_small_box2 {
+	width: 1299px;
+	height: 86px;
+}
+#chatting_middle_screen2-3_chat_small_box2 {
+	width: 1299px;
+	height: 74px;
+}
+
+
+/* --------------------------------------- */
+
+
+#chatting_middle_screen2-4_chat_box1 {
+	width: 1299px;
+	height: 86px;
+}
+#chatting_middle_screen2-4_chat_small_box1 {
+	width: 1299px;
+	height: 74px;
+	margin-bottom: 12px;
+	display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+#chatting_small_box_img2 {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_user_img {
+	width: 24px;
+	height: 24px;
+}
+#chatting_middle_screen2-4_chat_content_box1 {
+	max-width: 45%;
+	height: 74px;
+	border-radius: 24px;
+	margin-right: 8px;
+	background-color: rgb(234, 244, 255);
+	border-color: rgb(234, 244, 255);
+	border-width: 1px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_content4-1 {
+	width: 300px;
+	height: 44px;
+	font-size: 13px;
+	color: #303030;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: flex-end;
+}
+#chatting_div4-1 {
+	width: 290px;
+	height: 20px;
+	font-size: 13px;
+	font-weight: 450;
+	color: rgb(48, 48, 48);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#chatting_content4-2 {
+	width: 300.39px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: flex-end;
+}
+#chatting_div4-2 {
+	width: 290px;
+	height: 28px;
+	font-size: 12px;
+	font-weight: 450;
+	color: rgb(97, 97, 97);
+	display: flex;
+	align-items: center;
+}
+
+
+
+/* --------------------------------------- */
+
+
+
+#chatting_middle_screen2-5_chat_box2 {
+	width: 1299px;
+	height: 86px;
+}
+#chatting_middle_screen2-5_chat_small_box1 {
+	width: 1299px;
+	height: 74px;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: row;
+	padding-left: 17px;
+    padding-right: 17px;
+}
+#chatting_small_box_img1-2 {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_middle_screen2-5_chat_content_box1 {
+	max-width: 45%;
+	height: 74px;
+	margin-left: 8px;
+	border-radius: 24px;
+	background-color: rgb(243, 243, 243);
+	border-color: rgb(243, 243, 243);
+	border-width: 1px;
+}
+#chatting_content5-1 {
+	width: 158.11px;
+	height: 44px;
+	font-size: 13px;
+	color: #303030;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#chatting_div5-1 {
+	margin-left: 8px;
+}
+#chatting_content5-2 {
+	width: 158.11;
+	height: 28px;
+	font-size: 12px;
+	font-weight: 500;
+	font-family: sans-serif;
+	color: #616161;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#chatting_div5-2 {
+	margin-left: 8px;
+}
+#chatting_middle_screen2-5_chat_small_box2 {
+	width: 1299px;
+	height: 86px;
+}
+#chatting_middle_screen2-5_chat_small_box2 {
+	width: 1299px;
+	height: 74px;
+}
+
+
+
+/* --------------------------------------- */
+
+
+
+#chatting_middle_screen2-6_chat_box2 {
+	width: 1299px;
+	height: 86px;
+}
+#chatting_middle_screen2-6_chat_small_box1 {
+	width: 1299px;
+	height: 74px;
+	margin-bottom: 12px;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: row;
+	padding-left: 17px;
+    padding-right: 17px;
+}
+#chatting_small_box_img1-3 {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_middle_screen2-6_chat_content_box1 {
+	max-width: 45%;
+	height: 74px;
+	margin-left: 8px;
+	border-radius: 24px;
+	background-color: rgb(243, 243, 243);
+	border-color: rgb(243, 243, 243);
+	border-width: 1px;
+}
+#chatting_content6-1 {
+	width: 300px;
+	height: 44px;
+	font-size: 13px;
+	color: #303030;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#chatting_div6-1 {
+	margin-left: 8px;
+}
+#chatting_content6-2 {
+	width: 300px;
+	height: 28px;
+	font-size: 12px;
+	font-weight: 500;
+	font-family: sans-serif;
+	color: #616161;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#chatting_div6-2 {
+	margin-left: 8px;
+}
+#chatting_middle_screen2-6_chat_small_box2 {
+	width: 1299px;
+	height: 86px;
+}
+#chatting_middle_screen2-6_chat_small_box2 {
+	width: 1299px;
+	height: 74px;
+}
+
+
+
+/* --------------------------------------- */
+
+
+
+#chatting_middle_screen2-7_chat_box1 {
+	width: 1299px;
+	height: 86px;
+}
+#chatting_middle_screen2-7_chat_small_box1 {
+	width: 1299px;
+	height: 74px;
+	margin-bottom: 12px;
+	display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+#chatting_small_box_img2-1 {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_user_img2-1 {
+	width: 24px;
+	height: 24px;
+}
+#chatting_middle_screen2-7_chat_content_box1 {
+	max-width: 45%;
+	height: 74px;
+	border-radius: 24px;
+	margin-right: 8px;
+	background-color: rgb(234, 244, 255);
+	border-color: rgb(234, 244, 255);
+	border-width: 1px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_content7-1 {
+	width: 300px;
+	height: 44px;
+	font-size: 13px;
+	color: #303030;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: flex-end;
+}
+#chatting_div7-1 {
+	width: 290px;
+	height: 20px;
+	font-size: 13px;
+	font-weight: 450;
+	color: rgb(48, 48, 48);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#chatting_content7-2 {
+	width: 300.39px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: flex-end;
+}
+#chatting_div7-2 {
+	width: 290px;
+	height: 28px;
+	font-size: 12px;
+	font-weight: 450;
+	color: rgb(97, 97, 97);
+	display: flex;
+	align-items: center;
+}
+
+
+
+/* SPIGEN select 박스 클릭 시 */
+
+
+
+#chatting_open_box1 {
+	width: 302px;
+	height: 180px;
+	z-index: 5000;
+	position: fixed;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 42px;
+	margin-top: 47px;
+	border-radius: 8px;
+	background-color: white;
+	border: 1px solid #ddd;
+}
+#chatting_open_middle_box1 {
+	width: 268px;
+	height: 40px;
+	margin-top: 10px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border: none;
+}
+#chatting_open_middle_box1:hover {
+	background-color: #ddd;
+}
+#chatting_open_middle_box1_text {
+	font-size: 14px;
+	font-family: sans-serif;
+}
+#chatting_open_middle_box2 {
+	width: 268px;
+	height: 40px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	border: none;
+}
+#chatting_open_middle_box2:hover {
+	background-color: #ddd;
+}
+#chatting_open_middle_box1_text2 {
+	font-size: 14px;
+	font-family: sans-serif;
+}
+#chatting_open_middle_box3 {
+	width: 268px;
+	height: 40px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: white;
+	border: none;
+}
+#chatting_open_middle_box3:hover {
+	background-color: #ddd;
+}
+#chatting_open_middle_box1_text3 {
+	font-size: 14px;
+	font-family: sans-serif;
+}
+
+
+
+/* --------------------------------------- */
+
+
+
+/* SPIGEN 돋보기 박스 클릭 시 */
+#chatting_top_search_button {
+	width: 960px;
+	height: 198px;
+	margin-left: -140px;
+	margin-top: -1px;
+	z-index: 10000;
+	box-shadow: rgb(243, 243, 243) 0px 0px 20px;
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(227, 227, 227);
+	border-radius: 8px;
+	border-width: 1px;
+	margin-left: 1665px;
+	position: fixed;
+	display: none;
+}
+#chatting_top_search_button_small_box1 {
+	width: 960px;
+	height: 52px;
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(227, 227, 227);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_top_search_button_text {
+	width: 926px;
+	height: 19px;
+	border: none;
+}
+#chatting_top_search_button_small_box2 {
+	width: 960px;
+	height: 144px;
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(227, 227, 227);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	margin-top: -1px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_top_search_button_text_box1 {
+	color: rgb(97, 97, 97);
+	font-size: 13px;
+	margin-top: 12px;
+}
+
+
+
+
+/* --------------------------------------- */
+
+
+
+
+#chatting_middle_screen2-3_text_box1 {
+	width: 1299px;
+	height: 139px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+#chatting_middle_screen2-3_down_box1 {
+	width: 1275px;
+	height: 99px;
+	border-width: 1px;
+	border-radius: 9px;
+	border-color: rgb(227, 227, 227);
+}
+#chatting_middle_screen2-3_down_big_box {
+	width: 1273px;
+	height: 99px;
+}
+#chatting_middle_screen2-3_down_small_box1-1 {
+	width: 1273px;
+	height: 48px;
+	display: flex;
+	justify-content: space-between;
+	border-width: 1px;
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+	border-color: rgb(227, 227, 227);
+}
+#chatting_input_box {
+	width: 1229px;
+	height: 45px;
+	margin-right: -1px;
+	border: none;
+}
+#chatting_down_logo_box {
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 12px;
+	background-color: rgb(48, 48, 48);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_middle_screen2-3_down_small_box1-2 {
+	width: 1273px;
+	height: 49px;
+	border-width: 1px;
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
+	border-color: rgb(227, 227, 227);
+	background-color: rgb(243, 243, 243);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#chatting_down_img_boxes {
+	width: 100px;
+	height: 19px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#chatting_down_img_box1 {
+	width: 19px;
+	height: 19px;
+	cursor: pointer;
+}
+#chatting_down_img_box2 {
+	width: 19px;
+	height: 19px;
+	cursor: pointer;
+}
+/* #chatting_send_button { */
+/* 	width: 105px; */
+/* 	height: 32px; */
+/* 	border-radius: 8px; */
+/* 	background-color: #6b7177; */
+/* 	display: flex; */
+/* 	align-items: center; */
+/* 	justify-content: center; */
+/* 	cursor: pointer; */
+/* } */
+#chatting_send_button_text {
+	width: 105px;
+	height: 32px;
+	border-radius: 8px;
+	font-size: 13px;
+	background-color: rgb(0, 0, 0, 0,11);
+	border: none;
+	color: rgb(181, 181, 181);
+	cursor: pointer;
+}
+#chatting_middle_screen2-3_town_box2 {
+	width: 1275px;
+	height: 33px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+#down_text1 {
+	font-size: 12px;
+	font-weight: 650;
+	color: rgb(97, 97, 97);
+	margin-right: 5px;
+}
+#down_text2 {
+	font-size: 12px;
+	color: rgb(97, 97, 97);
+	margin-right: 5px;
+}
+#down_text3 {
+	font-size: 12px;
+	font-weight: 400;
+	color: rgb(0, 91, 211);
+}
+
+
+
+/* --------------------------------------- */
+
+
+
+
+
+/* 채팅입력란에서 제품 로고 클릭 시 */
+#chatting_product_add_button_box {
+	width: 550px;
+	height: 350px;
+	z-index: 6000;
+	margin-top: -399px;
+	margin-left: -1px;
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	font-family: sans-serif;
+	border-radius: 6px;
+	border-color: rgb(235, 235, 235);
+	border-width: 1px;
+	flex-direction: column;
+	align-items: center;
+}
+#chatting_product_add_button_small_box1 {
+	width: 548px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#chatting_product_add_button_small_text1 {
+	width: 417px;
+	height: 16px;
+	color: rgb(97, 97, 97);
+	font-size: 12px;
+	font-weight: 650;
+	margin-left: 10px;
+}
+#chatting_product_manage_button {
+	display: flex;
+}
+#chatting_product_add_button_small_text2 {
+	width: 87px;
+	height: 16px;
+	font-size: 12px;
+	font-weight: 650;
+	color: rgb(0, 91, 211);
+	display: flex;
+	justify-content: center;
+}
+#chatting_product_add_button_small_img {
+	width: 15px;
+	height: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#chatting_add_button_img {
+	width: 12px;
+	height: 12px;
+	color: rgb(0, 91, 211);
+	fill: rgb(0, 91, 211);
+	cursor: pointer;
+}
+#chatting_product_add_button_small_box2 {
+	width: 548px;
+	height: 254px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#chatting_product_add_button_big_box1 {
+	width: 531px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_product_add_block_box1 {
+	width: 515px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: -1px;
+	cursor: pointer;
+}
+#chatting_product_add_block_box1:hover {
+	background-color: #f1f1f1;
+}
+#product_nc_box1 {
+	width: 100px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#product_nothing_img1 {
+	width: 24px;
+	height: 24px;
+	background-color: rgb(241, 241, 241);
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#product_name1 {
+	width: 50px;
+	height: 20px;
+	color: rgb(48, 48, 48);
+	font-weight: 550;
+	font-size: 13px;
+	margin-left: 10px;
+}
+#product_content1 {
+	width: 80px;
+	height: 16px;
+	color: rgb(48, 48, 48);
+	font-weight: 450;
+	font-size: 12px;
+	display: flex;
+    justify-content: space-around;
+}
+#chatting_product_add_button_big_box2 {
+	width: 531px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_product_add_block_box2 {
+	width: 515px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: -1px;
+	cursor: pointer;
+}
+#chatting_product_add_block_box2:hover {
+	background-color: #f1f1f1;
+}
+#product_nc_box2 {
+	width: 100px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#product_nothing_img2 {
+	width: 24px;
+	height: 24px;
+	background-color: rgb(241, 241, 241);
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#product_content2 {
+	width: 85px;
+	height: 16px;
+	color: rgb(48, 48, 48);
+	font-weight: 450;
+	font-size: 12px;
+}
+#product_name2 {
+	width: 50px;
+	height: 20px;
+	color: rgb(48, 48, 48);
+	font-weight: 550;
+	font-size: 13px;
+	margin-left: 10px;
+}
+#chatting_product_add_button_big_box3 {
+	width: 531px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_product_add_block_box3 {
+	width: 515px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+#chatting_product_add_block_box3:hover {
+	background-color: #f1f1f1;
+}
+#product_nc_box3 {
+	width: 150x;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 7px;
+}
+#product_nothing_img3_box {
+	width: 24px;
+	height: 24px;
+}
+#product_nothing_img3 {
+	width: 24px;
+	height: 24px;
+}
+#product_content3 {
+	width: 90px;
+	height: 16px;
+	color: rgb(48, 48, 48);
+	font-weight: 450;
+	font-size: 12px;
+	display: flex;
+    justify-content: space-around;
+}
+#product_name3 {
+	width: 90px;
+	height: 20px;
+	color: rgb(48, 48, 48);
+	font-weight: 550;
+	font-size: 13px;
+	margin-left: 10px;
+}
+#chatting_product_add_button_big_box4 {
+	width: 531px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_product_add_block_box4 {
+	width: 515px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+#chatting_product_add_block_box4:hover {
+	background-color: #f1f1f1;
+}
+#product_nc_box4 {
+	width: 200x;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#product_nothing_img4 {
+	width: 24px;
+	height: 24px;
+	background-color: rgb(241, 241, 241);
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 7px;
+}
+#product_content4 {
+	width: 90px;
+	height: 16px;
+	color: rgb(48, 48, 48);
+	font-weight: 450;
+	font-size: 12px;
+	display: flex;
+    justify-content: space-around;
+}
+#product_name4 {
+	width: 104px;
+	height: 20px;
+	color: rgb(48, 48, 48);
+	font-weight: 550;
+	font-size: 13px;
+	margin-left: 10px;
+}
+#chatting_product_add_button_big_box5 {
+	width: 531px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_product_add_block_box5 {
+	width: 515px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: -1px;
+	cursor: pointer;
+}
+#chatting_product_add_block_box5:hover {
+	background-color: #f1f1f1;
+}
+#product_nothing_img5 {
+	width: 24px;
+	height: 24px;
+	background-color: rgb(241, 241, 241);
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 7px;
+}
+#product_nc_box5 {
+	width: 150x;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#product_content5 {
+	width: 90px;
+	height: 16px;
+	color: rgb(48, 48, 48);
+	font-weight: 450;
+	font-size: 12px;
+}
+#product_name5 {
+	width: 90px;
+	height: 20px;
+	color: rgb(48, 48, 48);
+	font-weight: 550;
+	font-size: 13px;
+	margin-left: 10px;
+}
+#chatting_product_add_button_big_box6 {
+	width: 531px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_product_add_block_box6 {
+	width: 515px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+#chatting_product_add_block_box6:hover {
+	background-color: #f1f1f1;
+}
+#product_nc_box6 {
+	width: 150x;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 7px;
+}
+#product_nothing_img6_box {
+	width: 24px;
+	height: 24px;
+}
+#product_nothing_img6 {
+	width: 24px;
+	height: 24px;
+}
+#product_content6 {
+	width: 85px;
+	height: 16px;
+	color: rgb(48, 48, 48);
+	font-weight: 450;
+	font-size: 12px;
+	display: flex;
+    justify-content: space-around;
+}
+#product_name6 {
+	width: 200px;
+	height: 20px;
+	color: rgb(48, 48, 48);
+	font-weight: 550;
+	font-size: 13px;
+	margin-left: 10px;
+}
+#chatting_product_add_button_big_box7 {
+	width: 531px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#chatting_product_add_block_box7 {
+	width: 515px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+#chatting_product_add_block_box7:hover {
+	background-color: #f1f1f1;
+}
+#product_nc_box7 {
+	width: 150x;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 7px;
+}
+#product_nothing_img7_box {
+	width: 24px;
+	height: 24px;
+}
+#product_nothing_img7 {
+	width: 24px;
+	height: 24px;
+}
+#product_content7 {
+	width: 85px;
+	height: 16px;
+	color: rgb(48, 48, 48);
+	font-weight: 450;
+	font-size: 12px;
+	display: flex;
+    justify-content: space-around;
+}
+#product_name7 {
+	width: 200px;
+	height: 20px;
+	color: rgb(48, 48, 48);
+	font-weight: 550;
+	font-size: 13px;
+	margin-left: 10px;
+}
+#chatting_product_add_button_small_box3 {
+	width: 516px;
+	height: 38px;
+	margin-top: 8px;
+	background-color: rgb(243, 243, 243);
+	border-color: rgb(227, 227, 227);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-width: 1px;
+	border-radius: 12px;
+}
+#chatting_product_add_button_box3-1 {
+	width: 17px;
+	height: 17px;
+	margin-left: 10px;
+}
+#chatting_product_search_input {
+	width: 480px;
+	height: 36px;
+	border-radius: 12px;
+	border-color: rgb(227, 227, 227);
+	background-color: rgb(243, 243, 243);
+	border: none;
+}

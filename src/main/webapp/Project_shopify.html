@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>shopify_main</title>
+	<link rel="stylesheet" href="Project_shopify.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			$("#shopify_left_menu_inner1-3_product").click(function(){
+				$("#shopify_left_menu_inner1-1_under_box").css("display", "flex");
+			});
+			$("#shopify_logo2").click(function(){
+				$("#shopify_search_popup").css("display", "flex");
+			});
+			$("#shopify_bell_button").click(function(){
+				$("#shopify_info_popup").css("display", "flex");
+			});
+			$("#shopify_spigen_button").click(function(){
+				$("#shopify_logo_popup").css("display", "flex");
+			});
+			$("#shopify_left_menu_inner1-4_customer").click(function(){
+				$("#shopify_left_menu_inner1-1_under_box2").css("display", "flex");
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="shopify_main_screen" class="border">
+		<!-- 검색창 클릭 시 -->
+		<div id="shopify_info_popup" >
+			<div id="shopify_info_popup_box1">
+				<div id="info_popup_text_box">
+					<div id="info_popup_text1">
+						알림
+					</div>
+					<div id="info_popup_img_box">
+						<svg id="info_popup_img1" viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M3 6a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z"></path><path d="M6.75 14a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75Z"></path><path d="M5.5 9.25a.75.75 0 0 0 0 1.5h9a.75.75 0 0 0 0-1.5h-9Z"></path></svg>
+						<svg id="info_popup_img2" viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M13.28 9.03a.75.75 0 0 0-1.06-1.06l-2.97 2.97-1.22-1.22a.75.75 0 0 0-1.06 1.06l1.75 1.75a.75.75 0 0 0 1.06 0l3.5-3.5Z"></path><path fill-rule="evenodd" d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Z"></path></svg>
+					</div>
+				</div>
+			</div>
+			<div id="shopify_info_popup_box2">
+				<div id="shopify_info_popup_text_box2">
+					<div id="info_popup_text2">
+						스토어 및 계정에 대한 알림이 여기에 표시됩니다.
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 여기까지 -->
+		
+		<!-- 검색창 클릭 시 -->
+		<div id="shopify_logo_popup">
+			<div id="shopify_logo_popup_text_box1">
+				<div id="shopify_logo_popup_text_box1-1">
+					<div id="shopify_logo_popup_name">
+						김환
+					</div>
+					<div id="shopify_logo_popup_email">
+						kimhwan0205@naver.com
+					</div>
+				</div>
+			</div>
+			<div id="shopify_logo_popup_text_box2">
+				<div id="shopify_logo_popup_text_box2-1">
+					<div id="shopify_logo_popup_sentence1">
+						계정 관리
+					</div>
+					<div id="shopify_logo_popup_sentence2">
+						로그아웃
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 여기까지 -->
+		
+		
+		<div id="shopify_header">
+			<div id="shopify_logo_box1-1">
+				<div id="shopify_logo_small_box">
+					<img id="shopify_logo1" src="img/shopify_logo.png">
+				</div>
+			</div>
+			<div id="shopify_logo_box1-2">
+				<div id="shopify_logo2_box">
+					<button id="shopify_logo2">
+						<div id="shopify_span_box">
+							<svg id="shopify_logo2_img" viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M12.323 13.383a5.5 5.5 0 1 1 1.06-1.06l2.897 2.897a.75.75 0 1 1-1.06 1.06l-2.897-2.897Zm.677-4.383a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path></svg>
+							<span id="shopify_logo2_text1">검색</span>
+						</div>
+						<div id="shopify_span_box2">
+							<span id="shopify_logo2_text2">Ctrl K</span>
+						</div>
+					</button>
+				</div>
+			</div>
+			<div id="shopify_logo_box1-3">
+				<div id="shopify_logo_box_small_box1-3">
+					<div id="shopify_logo_box_button_box1">
+						<button id="shopify_bell_button">
+							<svg id="shopify_logo_svg" viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="m7.252 14.424-2.446-.281c-1.855-.213-2.38-2.659-.778-3.616l.065-.038a2.887 2.887 0 0 0 1.407-2.48v-.509a4.5 4.5 0 0 1 9 0v.51c0 1.016.535 1.958 1.408 2.479l.065.038c1.602.957 1.076 3.403-.778 3.616l-2.543.292v.365a2.7 2.7 0 0 1-5.4 0v-.376Zm3.9.076h-2.4v.3a1.2 1.2 0 0 0 2.4 0v-.3Zm-3.152-1.5h4l3.024-.348a.452.452 0 0 0 .18-.837l-.065-.038a4.414 4.414 0 0 1-.747-.562 4.387 4.387 0 0 1-1.392-3.205v-.51a3 3 0 0 0-6 0v.51a4.387 4.387 0 0 1-2.138 3.767l-.065.038a.452.452 0 0 0 .18.838l3.023.347Z"></path></svg>
+						</button>
+					</div>
+					<div id="shopify_logo_box_button_box2">
+						<button id="shopify_spigen_button">
+							<div id="shopify_logo_box_button_box2_text">SPIGEN</div>
+							<div id="shopify_logo_box_button_box2_img">
+								<span aria-label="SPIGEN" role="img" class="Polaris-Avatar Polaris-Avatar--sizeMd Polaris-Avatar--imageHasLoaded"><img id="shopify_top_right_img" alt="" src="https://cdn.shopify.com/s/files/1/0645/3939/4240/files/b51a05dbee7ab1a7c4d621c78230fa4a_small.svg?v=1713947639" class="Polaris-Avatar__Image" role="presentation"></span>
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="shopify_main_screen2" class="border">
+			<div id="shopify_left_menu">
+				<div id="shopify_left_menu_inner1">
+					<div id="shopify_left_menu_inner1-1">
+						<div id="shopify_left_menu_inner1-1_home">
+							<div id="shopify_left_menu_inner1-1_home_logo_box">
+								<svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M14 16h-2a1 1 0 0 1-1-1v-2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v2.5a1 1 0 0 1-1 1h-2a2 2 0 0 1-2-2v-4.257a3 3 0 0 1 .879-2.122l3.707-3.707a2 2 0 0 1 2.828 0l3.707 3.707a3 3 0 0 1 .879 2.122v4.257a2 2 0 0 1-2 2Z"></path></svg>
+							</div>
+							<div id="shopify_left_menu_inner1-1_home_text">홈</div>
+						</div>
+						<div id="shopify_left_menu_inner1-2_order">
+							<div id="shopify_left_menu_inner1-2_order_logo_box">
+								<svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M4.255 5.847a2.75 2.75 0 0 1 2.72-2.347h6.05a2.75 2.75 0 0 1 2.72 2.347l.66 4.46c.063.425.095.853.095 1.282v1.661a3.25 3.25 0 0 1-3.25 3.25h-6.5a3.25 3.25 0 0 1-3.25-3.25v-1.66c0-.43.032-.858.094-1.283l.661-4.46Zm2.72-.847a1.25 1.25 0 0 0-1.236 1.067l-.583 3.933h2.484a1.25 1.25 0 0 1 1.185.855l.159.474a.25.25 0 0 0 .237.171h1.558a.25.25 0 0 0 .237-.17l.159-.475a1.25 1.25 0 0 1 1.185-.855h2.484l-.583-3.933a1.25 1.25 0 0 0-1.236-1.067h-6.05Z"></path></svg>
+							</div>
+							<div id="shopify_left_menu_inner1-2_order_text">주문</div>
+						</div>
+						<div id="shopify_left_menu_inner1-3_product">
+							<div id="shopify_left_menu_inner1-3_product_logo_box">
+								<svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M8.575 4.649a3.75 3.75 0 0 1 2.7-1.149h1.975a3.25 3.25 0 0 1 3.25 3.25v2.187a3.25 3.25 0 0 1-.996 2.34l-4.747 4.572a2.5 2.5 0 0 1-3.502-.033l-2.898-2.898a2.75 2.75 0 0 1-.036-3.852l4.254-4.417Zm4.425 3.351a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path></svg>
+							</div>
+							<div id="shopify_left_menu_inner1-3_product_text">제품</div>
+						</div>
+						<div id="shopify_left_menu_inner1-1_under_box">
+							<div id="shopify_left_menu_inner1-1_under1">
+								<div id="shopify_left_menu_inner1-1_under1-1">
+									컬렉션
+								</div>
+							</div>
+							<div id="shopify_left_menu_inner1-1_under2">
+								<div id="shopify_left_menu_inner1-1_under1-2">
+									재고
+								</div>
+							</div>
+							<div id="shopify_left_menu_inner1-1_under3">
+								<div id="shopify_left_menu_inner1-1_under1-3">
+									구매 주문
+								</div>
+							</div>
+							<div id="shopify_left_menu_inner1-1_under4">
+								<div id="shopify_left_menu_inner1-1_under1-4">
+									양도
+								</div>
+							</div>
+							<div id="shopify_left_menu_inner1-1_under5">
+								<div id="shopify_left_menu_inner1-1_under1-5">
+									기프트 카드
+								</div>
+							</div>
+						</div>
+						<div id="shopify_left_menu_inner1-4_customer">
+							<div id="shopify_left_menu_inner1-4_customer_logo_box">
+								<svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M10 9.75a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5Z"></path><path d="M10 11.5c-1.968 0-3.815.95-4.959 2.552l-.561.786a1.05 1.05 0 0 0 .855 1.662h9.33a1.05 1.05 0 0 0 .855-1.662l-.561-.786a6.094 6.094 0 0 0-4.959-2.552Z"></path></svg>
+							</div>
+							<div id="shopify_left_menu_inner1-4_customer_text">고객</div>
+						</div>
+						
+						
+						<!-- 고객 세그먼트 창 -->
+						<div id="shopify_left_menu_inner1-1_under_box2">
+							<div id="shopify_left_menu_inner1-1_under2">
+								<div id="shopify_left_menu_inner1-1_under2-1">
+									세그먼트
+								</div>
+							</div>
+						</div>
+						<!-- 고객 세그먼트 창 -->
+						
+							
+						<div id="shopify_left_menu_inner1-5_content">
+							<div id="shopify_left_menu_inner1-5_content_logo_box">
+								<svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M12 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path><path fill-rule="evenodd" d="M7.42 3.5h5.16c.535 0 .98 0 1.345.03.38.03.736.098 1.073.27a2.75 2.75 0 0 1 1.202 1.202c.172.337.24.693.27 1.073.03.365.03.81.03 1.345v1.91c0 .535 0 .98-.03 1.345-.03.38-.098.736-.27 1.073a2.751 2.751 0 0 1-1.201 1.202c-.338.172-.694.24-1.074.27a6.052 6.052 0 0 1-.288.017.744.744 0 0 1-.137.013h-6.08c-.535 0-.98 0-1.345-.03-.38-.03-.736-.098-1.073-.27a2.75 2.75 0 0 1-1.047-.934.75.75 0 0 1-.176-.31c-.157-.324-.22-.667-.25-1.031-.029-.365-.029-.81-.029-1.345v-1.91c0-.535 0-.98.03-1.345.03-.38.098-.736.27-1.073a2.75 2.75 0 0 1 1.202-1.202c.337-.172.693-.24 1.073-.27.365-.03.81-.03 1.345-.03Zm7.58 5.8-.001.533-.135-.192a1.75 1.75 0 0 0-2.778-.116l-1.086 1.303-2.411-2.893a1.75 1.75 0 0 0-2.68-.01l-.909 1.073v-1.548c0-.572 0-.957.025-1.253.023-.287.065-.424.111-.514a1.25 1.25 0 0 1 .547-.547c.09-.046.227-.088.514-.111.296-.024.68-.025 1.253-.025h5.1c.572 0 .957 0 1.252.025.288.023.425.065.516.111.235.12.426.311.546.547.046.09.088.227.111.514.024.296.025.68.025 1.253v1.85Z"></path><path d="M4 15.75a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75Z"></path><path d="M12.75 15a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5h-2.5Z"></path></svg>
+							</div>
+							<div id="shopify_left_menu_inner1-5_content_text">콘텐츠</div>
+						</div>
+						<div id="shopify_left_menu_inner1-6_analysis">
+							<div id="shopify_left_menu_inner1-6_analysis_logo_box">
+								<svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M9.971 4c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v9.058c0 .204 0 .344.024.465.099.496.486.883.982.982a2.5 2.5 0 0 0 .465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982 2.5 2.5 0 0 0 .024-.465v-9.058c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982 2.504 2.504 0 0 0-.465-.024h-.058Z"></path><path d="M5.471 9.5c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v3.558c0 .204 0 .344.024.465.099.496.486.883.982.982a2.5 2.5 0 0 0 .465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982c.024-.121.024-.26.024-.465v-3.558c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982 2.503 2.503 0 0 0-.465-.024h-.058Z"></path><path d="M14.471 6.5c-.204 0-.344 0-.465.024a1.25 1.25 0 0 0-.982.982c-.024.121-.024.26-.024.465v6.558c0 .204 0 .344.024.465.099.496.486.883.982.982.121.024.26.024.465.024h.058c.204 0 .344 0 .465-.024a1.25 1.25 0 0 0 .982-.982c.024-.121.024-.26.024-.465v-6.558c0-.204 0-.344-.024-.465a1.25 1.25 0 0 0-.982-.982 2.504 2.504 0 0 0-.465-.024h-.058Z"></path></svg>
+							</div>
+							<div id="shopify_left_menu_inner1-6_analysis_text">분석</div>
+						</div>
+						<div id="shopify_left_menu_inner1-7_marketing">
+							<div id="shopify_left_menu_inner1-7_marketing_logo_box">
+								<svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M5 10a5 5 0 0 1 10 0 1 1 0 1 0 2 0 7 7 0 1 0-7 7 1 1 0 1 0 0-2 5 5 0 0 1-5-5Z"></path><path d="M11.29 9.84a1 1 0 0 0 1.98-.278 3.25 3.25 0 1 0-3.782 3.653 1 1 0 1 0 .347-1.97 1.25 1.25 0 1 1 1.455-1.405Z"></path><path d="M11.611 10.973a.5.5 0 0 0-.638.638l2.121 6.01a.5.5 0 0 0 .871.135l1.172-1.558 1.038 1.037a.5.5 0 0 0 .707 0l.353-.353a.5.5 0 0 0 0-.707l-1.037-1.038 1.558-1.172a.5.5 0 0 0-.135-.87l-6.01-2.122Z"></path></svg>
+							</div>
+							<div id="shopify_left_menu_inner1-7_marketing_text">마케팅</div>
+						</div>
+						<div id="shopify_left_menu_inner1-8_discount">
+							<div id="shopify_left_menu_inner1-8_discount_logo_box">
+								<svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M11.527 3.327c-.6-1.306-2.455-1.306-3.054 0a1.68 1.68 0 0 1-2.112.874c-1.347-.5-2.66.813-2.16 2.16a1.68 1.68 0 0 1-.874 2.112c-1.306.6-1.306 2.455 0 3.054a1.68 1.68 0 0 1 .874 2.112c-.5 1.347.813 2.659 2.16 2.16a1.68 1.68 0 0 1 2.112.874c.6 1.306 2.455 1.306 3.054 0a1.68 1.68 0 0 1 2.112-.874c1.347.499 2.66-.813 2.16-2.16a1.68 1.68 0 0 1 .874-2.112c1.306-.6 1.306-2.455 0-3.054a1.68 1.68 0 0 1-.874-2.112c.5-1.347-.813-2.66-2.16-2.16a1.68 1.68 0 0 1-2.112-.874Zm-2.527 4.923a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm3.53.53-4 4a.75.75 0 1 1-1.06-1.06l4-4a.75.75 0 1 1 1.06 1.06Zm.47 3.47a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+							</div>
+							<div id="shopify_left_menu_inner1-8_discount_text">할인</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="shopify_middle_screen" class="border">
+				<!-- 검색창 클릭 시 -->
+				<div id="shopify_search_popup">
+					<div id="popup_search_box1">
+						<div id="popup_search_small_box1" class="border">
+							<svg id="input_box_svg1" viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M12.323 13.383a5.5 5.5 0 1 1 1.06-1.06l2.897 2.897a.75.75 0 1 1-1.06 1.06l-2.897-2.897Zm.677-4.383a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path></svg>
+							<input type="text" id="popup_input" placeholder="검색">
+							<svg id="input_box_svg2" viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M3 6a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z"></path><path d="M6.75 14a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75Z"></path><path d="M5.5 9.25a.75.75 0 0 0 0 1.5h9a.75.75 0 0 0 0-1.5h-9Z"></path></svg>
+						</div>
+					</div>
+					<div id="popup_search_box2">
+						<button id="popup_button1">앱</button>
+						<button id="popup_button2">고객</button>
+						<button id="popup_button3">주문</button>
+						<button id="popup_button4">제품</button>
+						<button id="popup_button5">판매 채널</button>
+					</div>
+					<div id="popup_search_box3">
+						<div id="popup_search_small_box3-1">
+							<img id="popup_search_glass_img" src="img/meta_big_glass.png">
+							<div id="popup_search_small_box_text">
+								SPIGEN에서 검색
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 여기까지 -->
+				<!-- 여기서부터 다시 시작 -->
+				
+				<!-- 원준이형 -->
+				<div id="contentall" class="border">
+			<div id ="content1">
+			<div id="content2" class ="fl"><a href ="http://localhost:9090/WebProject1/Gogo.html"><img src="img/sph.png"/></a></div>
+			<div id="content2_2" class ="fr"><span>제품 추가</span></div>
+			</div>
+			<div id ="content3" class="fl">
+				<div id ="content3_1">
+					<div id ="content3_2"><span>제목</span></div>
+					<div id="content3_2_input"><input type="text" placeholder="반소매 티셔츠"></div>
+				</div>
+				<div id="content4">
+					<div id="content4_1"><span>설명</span></div>
+					<div id="content4_2"><textarea id ="content4text"></textarea></div>
+				</div>
+				<div id="content5"><p>미디어</p></div>
+				<div id="content6">
+					<div id ="content6_1">
+						<div id="content66"><div id ="content6_2"><button><span>새로 업로드</span></button></div>
+						<div id ="content6_3"><button>기존 선택</button></div>
+						</div>
+						<p>이미지,비디오,3D 모델 허용</p>
+					</div>
+				</div>
+			</div>
+			<div id ="contentside" class="fr">
+				<div id ="contentside1"><h2>상태</h2></div>
+				<div id ="contentside2">
+					<select id ="sideselect">
+						<option value="판매중">판매중</option>
+						<option value="준비중">준비중</option>
+					</select>
+				</div>
+			</div>
+			<div id ="contentside1_1" class="fr">
+				<div id="contentside1_2"><h2>제품 구성</h2></div>
+				<div id="contentside1_3">
+					<div id ="contentside1_4">
+						<div id="contentside1_4_1"><span>컬렉션</span></div>
+						<input type="text">
+					</div>
+				</div>
+			</div>
+			<div id="contentside3" class="fr">
+				<div id="contentside3_1"><h2>가격</h2></div>
+				<div id="contentside3_2">
+					<div id="contentside3_3">
+						<div id="contentsideprice" class="fl">
+							<div id ="contentsideprice1"><span>₩</span></div>
+						</div>
+						<input type="text" placeholder="0" class ="fl">
+					</div>
+				</div>
+			</div>
+				<div id ="content7">
+					<div id="content7_1">
+						<div id ="content8"><h2>이형 상품</h2></div>
+						<div id="content9">
+							<div id ="content99">
+							<div id ="content9_1">
+								<div id ="content9_2">
+									<div id ="content9_3" class="fr"><span>옵션 이름</span></div>
+									<button><img src="img/ed.png"/></button>
+									<div id = "content9_4" class="fr"><input type="text"></div>
+								</div>
+							</div>
+							<div id ="content10">
+								<div id="content10_1">
+									<div id ="content10_2" class="fr"><span>옵션 값</span></div>
+								</div>
+								<div id ="content10_3">
+									<div id="content10_4"><input type="text" class="fr"></div>
+								</div>
+								<div id ="content10_5">
+									<div id="content10_6">
+										<button id="bt10"><span id="cn10">삭제</span></button>
+										<button id="bt101" class="fr"><span id="cn10">완료</span></button>
+									</div>
+								</div>
+							</div>
+							<div id="content11">
+								<div id="content11_1"><span>+</span><span>다른옵션추가</span></div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id ="content12">
+					<div id ="content12_1"><button class="fr"><span>저장</span></button></div>
+				</div>
+			</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
