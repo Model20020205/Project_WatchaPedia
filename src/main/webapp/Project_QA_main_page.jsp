@@ -1,6 +1,6 @@
-<%@page import="project_shopifyJDBC_Dto.ShowAllQAListDto"%>
+<%@page import="project_shopifyJDBC.ShowAllQAListDto"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="project_shopifyJDBC_Dao.ShowAllQAListDao"%>
+<%@page import="project_shopifyJDBC.ShowAllQAListDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
