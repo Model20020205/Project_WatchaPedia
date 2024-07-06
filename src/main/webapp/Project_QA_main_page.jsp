@@ -41,6 +41,17 @@
 			$("#div_QA_write_back_button_box").click(function(){
 				$("#div_QA_write_page_open").css("display", "none");
 			});
+			$("#div_page_down_box1").click(function(){
+				$("#div_content_box3").css("display", "flex");
+			});
+			$("#page_button1").click(function(){
+				$("#click_content1").css("display", "flex");
+				$("#click_content2").css("display", "none");
+			});
+			$("#page_button2").click(function(){
+				$("#click_content2").css("display", "flex");
+				$("#click_content1").css("display", "none");
+			});
 		});
 	</script>
 </head>
@@ -85,21 +96,40 @@
 				<span id="div_상단바6">등록일자</span>
 			</div>
 			
-			<% for(int i=2; i<=7; i++) { %>
-				<div id="div_content_small_box<%=i%>">
-					<div id="div_상단바<%=i%>-1"><%=listQAListDto.get(i-2).getProductInquiryIdx() %></div>
-					<div id="div_상단바<%=i%>-2">답변<%=(listQAListDto.get(i-2).getAnswer() != null ? "완료" : "대기") %></div>
-					<div id="div_상단바<%=i%>-3"><%=listQAListDto.get(i-2).getGubun()%></div>
-					<div id="div_상단바<%=i%>-4">
-						<%=listQAListDto.get(i-2).getTitle() %>
-						<% if(listQAListDto.get(i-2).getSecretPost()==0) {  // 비밀글일 때 %>
-							<img src="img/QA_열쇠.png">
-						<% } %>
-					</div>
-					<div id="div_상단바<%=i%>-5"><%=listQAListDto.get(i-2).getEmail() %></div>
-					<div id="div_상단바<%=i%>-6"><%=listQAListDto.get(i-2).getRegisterDate().split(" ")[0] %></div>
-				</div>
+			<div id="click_content1">    
+			<% for(int i = 1; i <= 6; i++) { %>
+			    <div class="qa_detail_box">
+			        <div class="qa_detail"><%= listQAListDto.get(i-1).getProductInquiryIdx() %></div>
+			        <div class="qa_detail">답변<%= (listQAListDto.get(i-1).getAnswer() != null ? "완료" : "대기") %></div>
+			        <div class="qa_detail"><%= listQAListDto.get(i-1).getGubun() %></div>
+			        <div class="qa_detail">
+			            <%= listQAListDto.get(i-1).getTitle() %>
+			            <% if(listQAListDto.get(i-1).getSecretPost() == 0) { %>
+			                <img src="img/QA_열쇠.png">
+			            <% } %>
+			        </div>
+			        <div class="qa_detail"><%= listQAListDto.get(i-1).getEmail() %></div>
+			        <div class="qa_detail"><%= listQAListDto.get(i-1).getRegisterDate().split(" ")[0] %></div>
+			    </div>
 			<% } %>
+			</div>    
+			<div id="click_content2">
+			<% for(int i = 7; i <= 10; i++) { %>
+			    <div class="qa_detail_box2">
+			        <div class="qa_detail"><%= listQAListDto.get(i-1).getProductInquiryIdx() %></div>
+			        <div class="qa_detail">답변<%= (listQAListDto.get(i-1).getAnswer() != null ? "완료" : "대기") %></div>
+			        <div class="qa_detail"><%= listQAListDto.get(i-1).getGubun() %></div>
+			        <div class="qa_detail">
+			            <%= listQAListDto.get(i-1).getTitle() %>
+			            <% if(listQAListDto.get(i-1).getSecretPost() == 0) { %>
+			                <img src="img/QA_열쇠.png">
+			            <% } %>
+			        </div>
+			        <div class="qa_detail"><%= listQAListDto.get(i-1).getEmail() %></div>
+			        <div class="qa_detail"><%= listQAListDto.get(i-1).getRegisterDate().split(" ")[0] %></div>
+			    </div>
+			<% } %>
+			</div>    
 			<%--
 			<div id="div_content_small_box2">
 				<span id="div_상단바2-1">2,769</span>
@@ -170,24 +200,12 @@
 		<div id="div_content_box4">
 			<span id="div_page_box">1/277페이지</span>
 		</div>
-		<div id="div_content_box5">
-			<div id="div_page_down_box1">
-				<img src="img/QA_더블우측꺽쇠.png"> 
-			</div>
-			<div id="div_page_down_box1">
-				<img src="img/QA_우측꺽쇠.png">
-			</div>
-			<div id="div_page_down_box1">5</div>
-			<div id="div_page_down_box1">4</div>
-			<div id="div_page_down_box1">3</div>
-			<div id="div_page_down_box1">2</div>
-			<div id="div_page_down_box1">1</div>
-			<div id="div_page_down_box1">
-				<img src="img/QA_좌측꺽쇠.png">
-			</div>
-			<div id="div_page_down_box1">
-				<img src="img/QA_더블좌측꺽쇠.png">
-			</div>
+		<div class="div_content_box5">
+			<div id="page_button1">1</div>
+			<div id="page_button2">2</div>
+			<div id="page_button3">3</div>
+			<div id="page_button4">4</div>
+			<div id="page_button5">5</div>
 		</div>
 		<div id="div_content_box6">
 			<button id="div_QA_down_button1">작성하기</button>
