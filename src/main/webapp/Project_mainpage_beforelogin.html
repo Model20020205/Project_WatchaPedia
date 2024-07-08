@@ -4,11 +4,45 @@
 	<meta charset="UTF-8">
 	<title>지금 바로 Shopify로 나만의 온라인 스토어를 만드세요</title>
 	<link rel="stylesheet" href="css/Project_mainpage_beforelogin.css"/>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+        $(document).ready(function(){
+            // 무료 체험 시작하기 버튼 회원가입화면으로 이동
+            $('#freeTrialButton1').click(function(event){
+				var email = $('input[name="email"]').val(); // 이메일 값 가져오기
+				var regexp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+				if (regexp.test(email)) {
+					window.location.href = 'http://localhost:9090/WebProject1/Project_create_account.html?email=' + encodeURIComponent(email);
+				} else {
+					alert("이메일 주소를 입력하세요.");
+				}
+			});
+            // 마우스 반응
+    		$('span').css('cursor', 'pointer');
+			// footer 화면이동
+			$('#service').click(function(){
+                window.location.href = 'https://www.shopify.com/kr/legal/terms';
+            });
+			$('#personal').click(function(){
+	            window.location.href = 'https://www.shopify.com/kr/legal/privacy';
+	        });
+			$('#sitemap').click(function(){
+	            window.location.href = 'https://www.shopify.com/kr/sitemap';
+	        });
+            // placeholder 풀기
+            $("input").focus(function(){
+				$(this).data('placeholder', $(this).attr('placeholder'))
+					.attr('placeholder', '');
+			}).blur(function(){
+				$(this).attr('placeholder', $(this).data('placeholder'));
+			});
+        });
+    </script>
 </head>
 <body>
 	<section id = "section_head1">
 		<div>
-			<img src = "img/logo.png">
+			<img src = "projectimg/logo.png">
 		</div>
 		<div>
 			<div>
@@ -17,9 +51,9 @@
 			</div>
 			<div>
 				<div>
-					<input type= "text" placeholder="이메일 주소를 입력하세요" />
+					<input type= "email" name="email" placeholder="이메일 주소를 입력하세요" />
 					<div>
-						<button type="button" onclick= "location.href='http://localhost:9090/WebProject1/YwShopifyCreate.html'">무료 체험 시작하기</button>
+						<button id="freeTrialButton1" type="button">무료 체험 시작하기</button>
 					</div>
 				</div>
 			</div>
@@ -72,82 +106,11 @@
 			<p>Jonathan Bayme, Theory11의 최고경영자</p>
 		</div>
 	</section>
-	<section id= "section_center2">
-		<div>
-			<h2>꿈꾸던 비즈니스를 월 $1의 비용으로 <br>창업하세요</h2>
-			<p>무료 체험을 시작하고 일부 Shopify 요금제를 1개월 동안 월 $1에 이용해 보세요.</p>
-		</div>
-		<div>
-			<div>
-				<input type= "text" placeholder="이메일 주소를 입력하세요" />
-				<div>
-					<button type="button" onclick= "location.href='http://localhost:9090/WebProject1/YwShopifyCreate.html'">무료 체험 시작하기</button>
-				</div>
-			</div>
-			<div>
-				<span>무료 체험을 시작하고 첫 1개월 동안 월 $1의 요금으로 이용하세요.</span>
-				<p>이메일을 입력하면, Shopify의 마케팅 이메일 수신에 동의하시는 것입니다.</p>
-			</div>
-		</div>
-	</section>
-	<section id= "section_faq">
-		<div>
-			<h2>FAQ</h2>
-		</div>
-		<div>
-			<div>
-				<div>
-					<button>
-						<p>Shopify란 무엇이고 어떻게 사용하나요?</p>
-						<div>
-							<svg viewBox="0 0 20 20" fill="none"  style="width: 20px; height: 20px; margin: 11px">
-								<rect x="2" y="9" width="16" height="2" fill="white"/>
-								<rect x="9" y="2" width="2" height="16" fill="white"/>				
-							</svg>
-						</div>
-					</button>
-				</div>
-				<div>
-					<button>
-						<p>Shopify 비용은 얼마인가요?</p>
-						<div>
-							<svg viewBox="0 0 20 20" fill="none"  style="width: 20px; height: 20px; margin: 11px">
-								<rect x="2" y="9" width="16" height="2" fill="white"/>
-								<rect x="9" y="2" width="2" height="16" fill="white"/>				
-							</svg>
-						</div>
-					</button>
-				</div>
-				<div>
-					<button>
-						<p>Shopify에서 원하는 도메인 이름을 사용할 수 있나요?</p>
-						<div>
-							<svg viewBox="0 0 20 20" fill="none"  style="width: 20px; height: 20px; margin: 11px">
-								<rect x="2" y="9" width="16" height="2" fill="white"/>
-								<rect x="9" y="2" width="2" height="16" fill="white"/>				
-							</svg>
-						</div>
-					</button>
-				</div>
-				<div>
-					<button>
-						<p>Shopify를 사용하는 데 디자이너나 개발자 기술이 필요한가요?</p>
-						<div>
-							<svg viewBox="0 0 20 20" fill="none"  style="width: 20px; height: 20px; margin: 11px">
-								<rect x="2" y="9" width="16" height="2" fill="white"/>
-								<rect x="9" y="2" width="2" height="16" fill="white"/>				
-							</svg>
-						</div>					
-					</button>
-				</div>
-			</div>
-		</div>
-	</section>
 	<footer id= "footer">
 		<div>
-			<span>서비스 약관</span>
-			<span>개인정보처리방침</span>
-			<span>사이트 맵</span>
+			<span id="service">서비스 약관</span>
+			<span id="personal">개인정보처리방침</span>
+			<span id="sitemap">사이트 맵</span>
 		</div>
 	</footer>
 </body>
