@@ -71,8 +71,9 @@ body {
 #boad_3{
 	width: 1265px;
 	height: 100%;
-	padding: 8px;
 	border-right: 1px solid rgb(235 235 235);
+	background-color: rgb(236 236 236);
+	overflow: hidden;
 }
 #boad_4{
 	width: 303px;
@@ -240,7 +241,7 @@ body {
 	height: 20px;
 }
 #header > div:nth-child(2) > div:nth-child(3) > button > div > div{
-	width: 52px;
+	width: 64px;
 	height: 13px;
 	font-size: 13px;
 	letter-spacing:normal;
@@ -843,6 +844,212 @@ body {
 .liyeon > button > span > img{
 	width: 20px;
 	height: 20px;
+}
+#boad_3 .scroll-container{
+	width: 1265px;
+	height: 100%;
+	padding : 8px;
+	background-color: white;
+	background-clip: content-box;
+	border-radius: 16px;
+	overflow-x: hidden;
+    overflow-y: scroll;
+}
+.noticeline {
+	width: 100%;
+	height: 39px;
+}
+.headline {
+	width: 100%;
+	height: 80.44px;
+}
+.mainproduct {
+	width: 100%;
+	height: 942.56px;
+}
+.page-width {
+	width: 1200px;
+	height: 100%;
+	margin: 0 24.5px;
+	padding: 0 50px;
+}
+.product-left-right {
+	width: 1100px;
+	height: 100%;
+	display: flex;
+}
+.product-left{
+	width: 605px;
+	height: 100%;
+}
+.left-ul {
+	width: 100%;
+	height: 893.77px;
+	margin: 0 0 20px 0;
+	padding: 0 0 0 0;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    list-style: none;
+}
+.big-li {
+	width: 605px;
+	height: 592.438px;
+}
+.big-li > img {
+	width: 100%;
+	height: 100%;
+}
+.small-li {
+	width: 298.5px;
+	height: 293.328px;
+}
+.small-li > img {
+	width: 100%;
+	height: 100%;
+}
+.product-right{
+	width: 495px;
+	height: 100%;
+	padding: 0 0 0 50px;
+}
+.right-div{
+	width: 445px;
+	height: 100%;
+}
+.pdtitle{
+	width: 445px;
+	height: 52px;
+	margin: 0 0 15px 0;
+}
+.pdtitle > h1{
+	width: 100%;
+	height: 100%;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.6px;
+	line-height: 52px;
+	margin: 0 0 0 0;
+}
+.pdcontent {
+	width: 445px;
+	height: 172.78px;
+	margin: 25px 0 25px 0;
+}
+.pdcontent > p {
+	width: 100%;
+	height: 100%;
+	margin: 0 0;
+	padding : 0 0;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	color : rgb(149, 149, 149);
+	letter-spacing: 0.6px;
+	line-height: 28.8px;
+}
+.relateproduct {
+	width: 100%;
+	height: 476.08px;
+}
+.emailcreate {
+	width: 100%;
+	height: 211px;
+}
+.pdprice{
+	width: 445px;
+	height: 32px;
+	margin: 15px 0 15px 0;
+}
+.pdprice > span{
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 1.3px;
+	line-height: 27px;
+}
+.pdoption {
+	width: 445px;
+	height: 250px;
+	margin: 15px 0 15px 0;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.option1{
+	display: flex;
+}
+.custom-radio-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 16px;
+  cursor: pointer;
+}
+input[type="radio"] {
+    display: none;
+}
+.custom-radio-btn.active,
+.custom-radio-btn:hover {
+  background-color: #ddd;
+}
+
+input[type="radio"]:checked + .custom-radio-btn {
+  background-color: black;
+  color: white;
+}
+.pdquantity {
+	width: 440px;
+	height: 78.5px;
+	margin : 15px 0 15px 0;
+}
+.pdaddcart {
+	width: 445px;
+	height: 45px;
+	margin: 15px 0 15px 0;
+}
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+label {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.pdquantity fieldset {
+    display: flex;
+    align-items: center;
+}
+
+.pdquantity button {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.pdquantity input[type="text"] {
+    width: 50px;
+    text-align: center;
+}
+.foot {
+	width: 100%;
+	height: 586.95px;
 }
 #boad_4 > div{
 	width: 300px;
