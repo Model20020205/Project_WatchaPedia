@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Customized</title>
-	<link rel= "stylesheet" href="css/YwShopifyCustomized.css"/>
+	<link rel= "stylesheet" href="css/ShopifyCustomized.css"/>
 </head>
 <body>
 	<div id= "header">
