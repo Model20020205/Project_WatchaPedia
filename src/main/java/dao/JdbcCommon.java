@@ -6,8 +6,8 @@ public class JdbcCommon {
 	
 	private static final String driver = "oracle.jdbc.driver.OracleDriver";
 	private static final String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private static final String id = "groupproject";
-	private static final String pw = "123456";
+	private static final String id = "Pro";
+	private static final String pw = "1234";
 	
     public static Connection getConnection() throws Exception {
     	Class.forName(driver);
