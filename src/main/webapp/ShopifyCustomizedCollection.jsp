@@ -1,75 +1,11 @@
-<%@page import="dto.NominationCollectionDto"%>
-<%@page import="dao.NominationCollectionDao"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="dto.NoticeBarDto"%>
-<%@page import="dao.NoticeBarDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	int nb_idx = 1;
-	try {
-		nb_idx = Integer.parseInt(request.getParameter("nb_idx"));
-	} catch (Exception e) { }
-	
-	NoticeBarDao nbDao = new NoticeBarDao();
-	ArrayList<NoticeBarDto> nbDto = nbDao.noticebar(nb_idx);
-	
-	int nc_idx = 1;
-	
-	NominationCollectionDao ncDao = new NominationCollectionDao();
-	NominationCollectionDto ncDto = new NominationCollectionDto();
-	
-%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Customized</title>
-	<link rel= "stylesheet" href="css/ShopifyCustomized.css"/>
-	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-	<script> 
-	// 버튼 클릭 시 다음 공지표시줄 내용을 띄움
-		$(document).ready(function() {
-        var index = 0;
-        var contents = $('.content');
-        
-        $('#sunseo_up').click(function() {
-            contents.hide(); // 모든 내용을 숨김
-            index++;
-            if (index >= contents.length) {
-                index = 0;
-            }
-            contents.eq(index).show(); // 현재 인덱스의 내용을 표시
-            
-        });
-        $('#sunseo_down').click(function() {
-            contents.hide(); // 모든 내용을 숨김
-            index--;
-            if (index < 0) {
-                index = contents.length - 1;
-            }
-            contents.eq(index).show(); // 현재 인덱스의 내용을 표시
-            
-        });
-        $(document).ready(function() {
-            $('#add_notice').click(function() {
-                var nb_idx = 1; 
-                
-                $.ajax({
-                    url: 'NbAddServlet',
-                    type: 'POST',
-                    data: {
-                        nb_idx: nb_idx
-                    },
-                    success: function(response) {
-                    },
-                    error: function(xhr, status, error) {
-                    }
-                });
-            });
-        });
-    });
-	</script>
+	<title>Collection</title>
+	<link rel= "stylesheet" href="css/ShopifyCustomizedCollection.css"/>
 </head>
 <body>
 	<div id= "header">
@@ -176,7 +112,7 @@
 					</div>
 				</div>
 			</div>
-			<div style= "overflow-x: hidden; overflow-y: scroll;">
+			<div style= "overflow-x: hidden; overflow-y: scroll; height: 807px;">
 				<section>
 					<div id="head_text">
 						<section>
@@ -189,21 +125,35 @@
 										<button class="one__">
 											<svg viewBox="0 0 20 20" class="two_ Online-Store-UI-IconWrapper__Icon_1aflm"><path fill-rule="evenodd" d="M6.24 8.2a.75.75 0 0 1 1.06.04l2.7 2.908 2.7-2.908a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 0 1 .04-1.06Z"></path></svg>
 											<svg viewBox="0 0 20 20" class="two_ Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M3.5 6.25c0-1.519 1.231-2.75 2.75-2.75.414 0 .75.336.75.75s-.336.75-.75.75c-.69 0-1.25.56-1.25 1.25 0 .414-.336.75-.75.75s-.75-.336-.75-.75Z"></path><path fill-rule="evenodd" d="M3.5 9.25c0-.966.784-1.75 1.75-1.75h9.5c.966 0 1.75.784 1.75 1.75v1.5c0 .966-.784 1.75-1.75 1.75h-9.5c-.966 0-1.75-.784-1.75-1.75v-1.5Zm1.75-.25c-.138 0-.25.112-.25.25v1.5c0 .138.112.25.25.25h9.5c.138 0 .25-.112.25-.25v-1.5c0-.138-.112-.25-.25-.25h-9.5Z"></path><path d="M3.5 13.75c0 1.519 1.231 2.75 2.75 2.75.414 0 .75-.336.75-.75s-.336-.75-.75-.75c-.69 0-1.25-.56-1.25-1.25 0-.414-.336-.75-.75-.75s-.75.336-.75.75Z"></path><path d="M13.75 3.5c1.519 0 2.75 1.231 2.75 2.75 0 .414-.336.75-.75.75s-.75-.336-.75-.75c0-.69-.56-1.25-1.25-1.25-.414 0-.75-.336-.75-.75s.336-.75.75-.75Z"></path><path d="M13.75 16.5c1.519 0 2.75-1.231 2.75-2.75 0-.414-.336-.75-.75-.75s-.75.336-.75.75c0 .69-.56 1.25-1.25 1.25-.414 0-.75.336-.75.75s.336.75.75.75Z"></path><path d="M11.75 4.25c0 .414-.336.75-.75.75h-2c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h2c.414 0 .75.336.75.75Z"></path><path d="M11 16.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-2c-.414 0-.75.336-.75.75s.336.75.75.75h2Z"></path></svg>
-											<span class="two__">공지표시줄</span>
+											<span class="two__">공지 표시줄</span>
 										</button>
 									</div>
 									<div>
 										<ol class="list">
-											<% for(int i=0; i<=nbDto.size()-1; i++) { %>
-												<li class="one____">
-													<button class="one__">
-														<svg style=""viewBox="0 0 20 20" class="two_ Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M5 6.25c0-.69.56-1.25 1.25-1.25h2a.75.75 0 0 0 0-1.5h-2a2.75 2.75 0 0 0-2.75 2.75v2a.75.75 0 0 0 1.5 0v-2Z"></path><path d="M13.75 5c.69 0 1.25.56 1.25 1.25v2a.75.75 0 0 0 1.5 0v-2a2.75 2.75 0 0 0-2.75-2.75h-2a.75.75 0 0 0 0 1.5h2Z"></path><path d="M13.75 15c.69 0 1.25-.56 1.25-1.25v-2a.75.75 0 0 1 1.5 0v2a2.75 2.75 0 0 1-2.75 2.75h-2a.75.75 0 0 1 0-1.5h2Z"></path><path d="M6.25 15c-.69 0-1.25-.56-1.25-1.25v-2a.75.75 0 0 0-1.5 0v2a2.75 2.75 0 0 0 2.75 2.75h2a.75.75 0 0 0 0-1.5h-2Z"></path></svg>
-														<span class="two__"><%=nbDto.get(i).getContent() %></span>
-													</button>
-												</li>
-											<% } %>
-											<li class="one____">
-												<button id="add_notice" class="one__ click">
+											<li>
+												<button class="one__">
+													<svg viewBox="0 0 20 20" class="two_ Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M5 6.25c0-.69.56-1.25 1.25-1.25h2a.75.75 0 0 0 0-1.5h-2a2.75 2.75 0 0 0-2.75 2.75v2a.75.75 0 0 0 1.5 0v-2Z"></path><path d="M13.75 5c.69 0 1.25.56 1.25 1.25v2a.75.75 0 0 0 1.5 0v-2a2.75 2.75 0 0 0-2.75-2.75h-2a.75.75 0 0 0 0 1.5h2Z"></path><path d="M13.75 15c.69 0 1.25-.56 1.25-1.25v-2a.75.75 0 0 1 1.5 0v2a2.75 2.75 0 0 1-2.75 2.75h-2a.75.75 0 0 1 0-1.5h2Z"></path><path d="M6.25 15c-.69 0-1.25-.56-1.25-1.25v-2a.75.75 0 0 0-1.5 0v2a2.75 2.75 0 0 0 2.75 2.75h2a.75.75 0 0 0 0-1.5h-2Z"></path></svg>
+													<span class="two__">~~~대박 할인 이벤트~~~</span>
+												</button>
+											</li>
+											<li>
+												<button class="one__">
+													<span>
+														<span class="two_ fl">
+														<svg viewBox="0 0 20 20" class="two_ Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M5 6.25c0-.69.56-1.25 1.25-1.25h2a.75.75 0 0 0 0-1.5h-2a2.75 2.75 0 0 0-2.75 2.75v2a.75.75 0 0 0 1.5 0v-2Z"></path><path d="M13.75 5c.69 0 1.25.56 1.25 1.25v2a.75.75 0 0 0 1.5 0v-2a2.75 2.75 0 0 0-2.75-2.75h-2a.75.75 0 0 0 0 1.5h2Z"></path><path d="M13.75 15c.69 0 1.25-.56 1.25-1.25v-2a.75.75 0 0 1 1.5 0v2a2.75 2.75 0 0 1-2.75 2.75h-2a.75.75 0 0 1 0-1.5h2Z"></path><path d="M6.25 15c-.69 0-1.25-.56-1.25-1.25v-2a.75.75 0 0 0-1.5 0v2a2.75 2.75 0 0 0 2.75 2.75h2a.75.75 0 0 0 0-1.5h-2Z"></path></svg>
+														</span>
+														<span class="two__ fl">내가 이 세상에서 가장 강력한 케이스다!!</span>
+													</span>
+												</button>
+											</li>
+											<li>
+												<button class="one__">
+													<svg viewBox="0 0 20 20" class="two_ Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M5 6.25c0-.69.56-1.25 1.25-1.25h2a.75.75 0 0 0 0-1.5h-2a2.75 2.75 0 0 0-2.75 2.75v2a.75.75 0 0 0 1.5 0v-2Z"></path><path d="M13.75 5c.69 0 1.25.56 1.25 1.25v2a.75.75 0 0 0 1.5 0v-2a2.75 2.75 0 0 0-2.75-2.75h-2a.75.75 0 0 0 0 1.5h2Z"></path><path d="M13.75 15c.69 0 1.25-.56 1.25-1.25v-2a.75.75 0 0 1 1.5 0v2a2.75 2.75 0 0 1-2.75 2.75h-2a.75.75 0 0 1 0-1.5h2Z"></path><path d="M6.25 15c-.69 0-1.25-.56-1.25-1.25v-2a.75.75 0 0 0-1.5 0v2a2.75 2.75 0 0 0 2.75 2.75h2a.75.75 0 0 0 0-1.5h-2Z"></path></svg>
+													<span class="two__">Welcome to our store</span>
+												</button>
+											</li>
+											<li>
+												<button class="one__">
 													<svg viewBox="0 0 20 20" class="two_ Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M6.25 10a.75.75 0 0 1 .75-.75h2.25v-2.25a.75.75 0 0 1 1.5 0v2.25h2.25a.75.75 0 0 1 0 1.5h-2.25v2.25a.75.75 0 0 1-1.5 0v-2.25h-2.25a.75.75 0 0 1-.75-.75Z"></path><path fill-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"></path></svg>
 													<span calss="two__"style="color:#005bd3">공지 추가</span>
 												</button>
@@ -704,272 +654,255 @@
 				</section>							
 			</div>
 		</div>
-		<div id="boad_3" style="overflow-y: auto;">
-			<!-- 공지표시줄 시작 -->
-			<div id="nb">
-				<div>
+		<div id="boad_3">
+			<div style="overflow-y: scroll; height: 915px;">
+				<!-- 공지표시줄 시작 -->
+				<div id="nb">
 					<div>
-						<button id="sunseo_down" class="click">
-							<svg style="transform: rotate(90deg); width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-							</path></svg>
-						</button>
 						<div>
-							<div>
-								<p>
-									<% for(int i=0; i<=nbDto.size()-1; i++) { %>
-										<span class="content nb_content" data-index="<%= i %>" style="display: <%= (i == 0 ? "block" : "none") %>;">
-											<%= nbDto.get(i).getContent() %>
-										</span>
-									<% } %>
-								</p>
-							</div>
-						</div>
-						<button id="sunseo_up" class="click">
-							<svg style="transform: rotate(270deg); width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-							</path></svg>
-						</button>
-					</div>
-				</div>
-			</div>
-			<!-- 공지표시줄 종료 -->
-			
-			<!-- 머리글 시작점 -->
-			<div id="ht">
-				<header>
-					<h1>
-						<a>
-							<div>
-								<img src="//cdn.shopify.com/s/files/1/0645/3939/4240/files/b51a05dbee7ab1a7c4d621c78230fa4a.svg?v=1713947639&width=600"/>
-							</div>
-						</a>
-					</h1>
-					<nav>
-						<ul>
-							<li>
-								<details>
-									<summary>
-										<span>SMART DEVICE</span>
-										<svg style="width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-										</path></svg>
-									</summary>
-									<div>
-										<ul>
-											<li><a>APPLE</a></li>
-											<li>
-												<a>SAMSUNG</a>
-												<ul>
-													<li><a>ss</a></li>
-													<li><a>sa</a></li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary>
-										<span>AUTO</span>
-										<svg style="width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-										</path></svg>
-									</summary>
-									<div>
-										<ul>
-											<li><a>GMC</a></li>
-										</ul>
-									</div>
-								</details>
-							</li>
-							<li>
-								<details>
-									<summary>
-										<span>LIFE</span>
-										<svg style="width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-										</path></svg>
-									</summary>
-									<div>
-										<ul>
-											<li><a>BIKE</a></li>
-										</ul>
-									</div>
-								</details>
-							</li>
-						</ul>
-					</nav>
-					<div class="fr">
-						<details>
-							<summary>
-								<span>
-									<img src="img/search.png"/>
-								</span>
-							</summary>
+							<button>
+								<svg style="transform: rotate(90deg); width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+								</path></svg>
+							</button>
 							<div>
 								<div>
-									<form>
-										<div>
-											<input type="search" name="q">
-											<label>검색</label>
-											<button>
-												<img src="img/search.png"/>
-											</button>
-										</div>
-									</form>
-									<button type="button">
-										<img src="img/close.png">
-									</button>
+									<p>
+										<span>대박 할인 이벤트</span>
+									</p>
 								</div>
 							</div>
-						</details>
-						<a>
-							<svg class="icon icon-cart-empty" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-							<path d="m15.75 11.8h-3.16l-.77 11.6a5 5 0 0 0 4.99 5.34h7.38a5 5 0 0 0 4.99-5.33l-.78-11.61zm0 1h-2.22l-.71 10.67a4 4 0 0 0 3.99 4.27h7.38a4 4 0 0 0 4-4.27l-.72-10.67h-2.22v.63a4.75 4.75 0 1 1 -9.5 0zm8.5 0h-7.5v.63a3.75 3.75 0 1 0 7.5 0z" fill="currentColor" fill-rule="evenodd"></path>
-							</svg>
-						</a>
-					</div>
-				</header>
-			</div>
-			<!-- 머리글 종료 -->
-			
-			<!-- 메인 템플릿 시작점 -->
-			<main id="template">
-			<!-- 추천 컬렉션 시작점 -->
-				<div>
-					<div>
-						<div>
-							<h2>Featured products</h2>
+							<button>
+								<svg style="transform: rotate(270deg); width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+								</path></svg>
+							</button>
 						</div>
-						<div>
+					</div>
+				</div>
+				<!-- 공지표시줄 종료 -->
+				
+				<!-- 머리글 시작점 -->
+				<div id="ht">
+					<header>
+						<h1>
+							<a>
+								<div>
+									<img src="//cdn.shopify.com/s/files/1/0645/3939/4240/files/b51a05dbee7ab1a7c4d621c78230fa4a.svg?v=1713947639&width=600"/>
+								</div>
+							</a>
+						</h1>
+						<nav>
 							<ul>
 								<li>
-									<div>
+									<details>
+										<summary>
+											<span>SMART DEVICE</span>
+											<svg style="width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+											</path></svg>
+										</summary>
 										<div>
-											<div>
-												<svg style="width: 213.594px; height: 213.594px;"class="placeholder-svg" preserveAspectRatio="xMidYMid slice" width="448" height="448" viewBox="0 0 448 448" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_894_1529)"><path d="M448 0H0v448h448V0Z" fill="#F2F2F2"></path><path d="m354.54 158.19-33.31-35.87a59.971 59.971 0 0 0-32.2-18.01l-20.99-4.2c-2.72-.49-5.45-.93-8.17-1.33l-.01.01v-.01c-1.29-.21-2.58-.31-3.88-.29-1.3.01-2.6.14-3.88.38l-7.25 1.36-7.08 1.33c-4.54.85-9.13 1.28-13.72 1.27-4.59 0-9.19-.42-13.72-1.27l-7.08-1.33-7.25-1.36c-1.28-.24-2.58-.37-3.88-.38-1.3-.02-2.6.08-3.88.29v.01l-.01-.01c-2.73.4-5.46.83-8.17 1.33l-20.99 4.2a59.971 59.971 0 0 0-32.2 18.01l-33.31 35.87c-3.03 3.26-2.81 8.37.48 11.36l32.37 29.43c3.16 2.87 8.02 2.76 11.04-.26l9.48-9.48c1.89-1.89 5.12-.55 5.12 2.12v136.76c0 4.42 3.58 8 8 8h128c4.42 0 8-3.58 8-8V191.36c0-2.67 3.23-4.01 5.12-2.12l9.48 9.48a7.994 7.994 0 0 0 11.04.26l32.37-29.43c3.29-2.99 3.51-8.1.48-11.36Zm-130.5-26.08h-.34.7H224.04Z" fill="#DD6A5A"></path><path d="m252.03 98.87-14.35 2.69a74.08 74.08 0 0 1-27.37 0l-14.35-2.69c-2.56-.48-5.17-.51-7.74-.09 1.36 18.63 16.85 33.32 35.78 33.32s34.41-14.69 35.78-33.32c-2.57-.42-5.18-.39-7.74.09h-.01Z" fill="#C03D37"></path><path d="m195.99 109.55 14.34 2.7c9.04 1.7 18.31 1.7 27.35 0l14.34-2.7c1.78-.33 3.58-.44 5.38-.33 1.27-3.27 2.09-6.77 2.35-10.43-2.56-.42-5.18-.39-7.73.09l-14.34 2.7c-9.04 1.7-18.31 1.7-27.35 0l-14.34-2.7c-2.55-.48-5.17-.51-7.73-.09.27 3.66 1.08 7.16 2.35 10.43 1.8-.1 3.61 0 5.38.33Z" fill="#CC5747"></path><path d="M232.38 112.11h-16.76a1.62 1.62 0 0 0-1.62 1.62v7.76c0 .895.725 1.62 1.62 1.62h16.76a1.62 1.62 0 0 0 1.62-1.62v-7.76a1.62 1.62 0 0 0-1.62-1.62Z" fill="#fff"></path><path d="M185.16 95.82c1.65-.29 3.18.86 3.45 2.52 2.73 17.09 17.53 30.16 35.39 30.16s32.66-13.06 35.39-30.16c.26-1.66 1.79-2.81 3.45-2.52l5.93 1.04c1.59.28 2.68 1.78 2.43 3.38-3.64 22.79-23.38 40.21-47.2 40.21-23.82 0-43.56-17.42-47.2-40.21-.25-1.6.84-3.1 2.43-3.38l5.93-1.04ZM95.82 155.74l-2.23 2.4c-3.03 3.26-2.81 8.37.48 11.36l32.37 29.43c3.16 2.87 8.02 2.76 11.04-.26l2.56-2.56-44.22-40.37Z" fill="#E8AF57"></path><path d="m354.541 158.19-33.31-35.87a59.971 59.971 0 0 0-32.2-18.01l-17.92-3.58c-.57 3.35-1.49 6.59-2.72 9.67l12.12 2.42a59.971 59.971 0 0 1 32.2 18.01l33.31 35.87c2.32 2.49 2.73 6.07 1.32 8.95l6.71-6.1c3.29-2.99 3.51-8.1.48-11.36h.01ZM293.9 195.51a74.154 74.154 0 0 0-10.11 51.02l.04.27c.53 3.19 1.18 6.58 1.84 10.38 1.52 8.8 2.26 17.72 2.26 26.65V295c0 14-9.37 26.26-22.87 29.95a89.888 89.888 0 0 1-42.54 1.17l-15.36-3.29a90.172 90.172 0 0 0-38.42.15l-16.73 3.73v1.41c0 4.42 3.58 8 8 8h128c4.42 0 8-3.58 8-8v-136l-2.1 3.4-.01-.01Z" fill="#E87E69"></path><path d="m352.26 155.74 2.23 2.4c3.03 3.26 2.81 8.37-.48 11.36l-32.37 29.43c-3.16 2.87-8.02 2.76-11.04-.26l-2.56-2.56 44.22-40.37Z" fill="#E8AF57"></path></g><defs><clipPath id="clip0_894_1529"><path fill="#fff" d="M0 0h448v448H0z"></path></clipPath></defs></svg>
-											</div>
+											<ul>
+												<li><a>APPLE</a></li>
+												<li>
+													<a>SAMSUNG</a>
+													<ul>
+														<li><a>ss</a></li>
+														<li><a>sa</a></li>
+													</ul>
+												</li>
+											</ul>
 										</div>
+									</details>
+								</li>
+								<li>
+									<details>
+										<summary>
+											<span>AUTO</span>
+											<svg style="width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+											</path></svg>
+										</summary>
+										<div>
+											<ul>
+												<li><a>GMC</a></li>
+											</ul>
+										</div>
+									</details>
+								</li>
+								<li>
+									<details>
+										<summary>
+											<span>LIFE</span>
+											<svg style="width: 10px; height: 6px;"aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+											</path></svg>
+										</summary>
+										<div>
+											<ul>
+												<li><a>BIKE</a></li>
+											</ul>
+										</div>
+									</details>
+								</li>
+							</ul>
+						</nav>
+						<div class="fr">
+							<details>
+								<summary>
+									<span>
+										<img src="img/search.png"/>
+									</span>
+								</summary>
+								<div>
+									<div>
+										<form>
+											<div>
+												<input type="search" name="q">
+												<label>검색</label>
+												<button>
+													<img src="img/search.png"/>
+												</button>
+											</div>
+										</form>
+										<button type="button">
+											<img src="img/close.png">
+										</button>
+									</div>
+								</div>
+							</details>
+							<a>
+								<svg class="icon icon-cart-empty" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+								<path d="m15.75 11.8h-3.16l-.77 11.6a5 5 0 0 0 4.99 5.34h7.38a5 5 0 0 0 4.99-5.33l-.78-11.61zm0 1h-2.22l-.71 10.67a4 4 0 0 0 3.99 4.27h7.38a4 4 0 0 0 4-4.27l-.72-10.67h-2.22v.63a4.75 4.75 0 1 1 -9.5 0zm8.5 0h-7.5v.63a3.75 3.75 0 1 0 7.5 0z" fill="currentColor" fill-rule="evenodd"></path>
+								</svg>
+							</a>
+						</div>
+					</header>
+				</div>
+				<!-- 머리글 종료 -->
+				
+				<!-- 메인 템플릿 시작점 -->
+				<main id="template">
+					<div>
+						<div>
+							<div>
+								<h1>APPLE</h1>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div>
+							<div>
+								<ul>
+									<li>
 										<div>
 											<div>
-												<h3>
-													<a>제품명 예</a>
-												</h3>
 												<div>
 													<div>
 														<div>
-															<span>₩20 KRW</span>
+															<img style="max-width:100%; max-height:100%;"src="//cdn.shopify.com/s/files/1/0645/3939/4240/files/ToughArmor.png?v=1714098352&width=533"/>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div>
+														<h3><a>Tong Armor</a></h3>
+														<div>
+															<div>
+																<span>₩59,900 KRW</span>
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</main>
+				<!-- 템플릿 종료 -->
+				
+				<!-- 이메일 가입 시작-->
+				<div id="email">
+					<div>
+						<h2>Subscribe to out emails</h2>
+						<div></div>
+						<div>
+							<form>
+								<div>
+									<input type="email" />
+									<label>이메일</label>
+									<button>
+										<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+											</path>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- 이메일 가입 종료 -->
+				
+				<!-- 바닥글 시작 -->
+				<div id="ft">
+					<footer>
+						<div>
+							<div>
+								<div class="floor_block">
+									<h2 class="floor_main_text">INFO</h2>
+									<div>
+										<h6 class="floor_text_first">Our story</h6>
+										<h6 class="floor_text_center">Careers</h6>
+										<h6 class="floor_text_finish">Covid-19</h6>
 									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			<!-- 추천 컬렉션 끝-->
-			<!-- 이미지 배너 시작점 -->	
-				<div>
-					<div>
-						<div>
-							<img src="//cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=3840" alt="" srcset="//cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=375 375w, //cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=550 550w, //cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=750 750w, //cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=1100 1100w, //cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=1500 1500w, //cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=1780 1780w, //cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=2000 2000w, //cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=3000 3000w, //cdn.shopify.com/s/files/1/0645/3939/4240/files/i8281312671.jpg?v=1713952288&amp;width=3840 3840w" width="1076" height="561.0" sizes="100vw" fetchpriority="auto">
-						</div>
-						<div>
-							<div>
-								<h2>Protect your Vision</h2>
-								<div>
-									<a>Own it now</a>
+								</div>
+								<div class="floor_block">
+									<h2 class="floor_main_text">LEGAL</h2>
+									<div>
+										<p class="floor_text_first">Privacy</p>
+										<p class="floor_text_finish">Terms</p>
+									</div>
+								</div>
+								<div class="floor_block">
+								<h2 class="floor_main_text">SUPPORT</h2>
+									<div>
+										<p class="floor_text_first">Contact</p>
+										<p class="floor_text_center">Shipping</p>
+										<p class="floor_text_finish">Return</p>
+									</div></div>
+								<div class="floor_block">
+									<h2 class="floor_main_text">OTHERS</h2>
+									<div>
+										<p class="floor_text_first">My Account</p>
+										<p class="floor_text_center">Reward Program</p>
+										<p class="floor_text_finish">Wallpapers</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			<!-- 이미지 배너 끝 -->
-			</main>
-			<!-- 템플릿 종료 -->
-			
-			<!-- 이메일 가입 시작-->
-			<div id="email">
-				<div>
-					<h2>Subscribe to out emails</h2>
-					<div></div>
-					<div>
-						<form>
+						<div>
 							<div>
-								<input type="email" />
-								<label>이메일</label>
-								<button>
-									<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
-										</path>
-									</svg>
-								</button>
+								<div></div>
 							</div>
-						</form>
-					</div>
+							<div>
+								<div>
+									<small>
+										© 2024, 
+										<a>SPIGEN</a>
+									</small>
+									<small>Powered by Shopify</small>
+								</div>
+							</div>
+						</div>
+					</footer>
 				</div>
+				<!-- 바닥글 종료 -->
 			</div>
-			<!-- 이메일 가입 종료 -->
-			
-			<!-- 바닥글 시작 -->
-			<div id="ft">
-				<footer>
-					<div>
-						<div>
-							<div class="floor_block">
-								<h2 class="floor_main_text">INFO</h2>
-								<div>
-									<h6 class="floor_text_first">Our story</h6>
-									<h6 class="floor_text_center">Careers</h6>
-									<h6 class="floor_text_finish">Covid-19</h6>
-								</div>
-							</div>
-							<div class="floor_block">
-								<h2 class="floor_main_text">LEGAL</h2>
-								<div>
-									<p class="floor_text_first">Privacy</p>
-									<p class="floor_text_finish">Terms</p>
-								</div>
-							</div>
-							<div class="floor_block">
-							<h2 class="floor_main_text">SUPPORT</h2>
-								<div>
-									<p class="floor_text_first">Contact</p>
-									<p class="floor_text_center">Shipping</p>
-									<p class="floor_text_finish">Return</p>
-								</div></div>
-							<div class="floor_block">
-								<h2 class="floor_main_text">OTHERS</h2>
-								<div>
-									<p class="floor_text_first">My Account</p>
-									<p class="floor_text_center">Reward Program</p>
-									<p class="floor_text_finish">Wallpapers</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div>
-							<div></div>
-						</div>
-						<div>
-							<div>
-								<small>
-									© 2024, 
-									<a>SPIGEN</a>
-								</small>
-								<small>Powered by Shopify</small>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
-			<!-- 바닥글 종료 -->
 		</div>
 		<div id="boad_4">
 			<div>
