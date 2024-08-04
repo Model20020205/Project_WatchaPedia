@@ -1,4 +1,4 @@
-package project_shopify_JDBC;
+package dto;
 
 public class ShowAllQAListDto {
 	private int productInquiryIdx;
