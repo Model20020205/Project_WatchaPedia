@@ -1,0 +1,102 @@
+@charset "UTF-8";
+* { box-sizing: border-box; }
+body {
+	margin: 0 auto;
+}
+#border {
+	border: 1px solid red;
+}
+.ins_main_screen {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+    inset: 0;
+    z-index: var(--z-index-modal-back-screen);
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    overflow: hidden scroll;
+    background-color: rgba(0, 0, 0, 0.56);
+}
+.insert_comment {
+	width: 640px;
+	height: 492px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+}
+.insert_header_box {
+	width: 600px;
+	height: 33px;
+	margin-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.insert_title_box {
+	width: 570px;
+	height: 24px;
+	font-size: 16.5px;
+	font-weight: bold;
+}
+.insert_out {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insert_content_box {
+	width: 600px;
+	height: 410px;
+	position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.insert_box {
+	width: 100%;
+	min-height: 360px;
+	margin: 1px 0 44px;
+	overflow: auto;
+	outline: none;
+	border: 0;
+    position: absolute;
+}
+.down_box {
+	width: 640px;
+	height: 44px;
+	position: absolute;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.korean_count {
+	width: 166.42px;
+	height: 44px;
+	color: #7e7e7e;
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.save_button {
+	width: 109.41px;
+	height: 38px;
+	margin-left: 12px;
+	border-radius: 7px;
+	border: none;
+	background-color: #ff2f6e;
+	color: white;
+	cursor: pointer;
+}
