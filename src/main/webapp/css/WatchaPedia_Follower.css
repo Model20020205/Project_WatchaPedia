@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+/* 기본값 */
+* { 
+	box-sizing: border-box; 
+}
+
+.border { 
+	border: 1px solid red; 
+}
+
+body { 
+	height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+	width: 100%;
+    height: 100%;
+}
+
+a {
+	color: #141414;
+    text-decoration: none;
+    outline: #fff;
+}
+
+ul {
+	padding: 0;
+    padding-inline-start: 0;
+    margin: 0;
+    margin-block: 0 0;
+    margin-inline: 0;
+    list-style-type: none;
+}
+
+h4{
+	padding: 0;
+    margin: 0;
+}
+
+ol, ul {
+    padding: 0;
+    padding-inline-start: 0;
+    margin: 0;
+    margin-block: 0 0;
+    margin-inline: 0;
+    list-style-type: none;
+}
+
+/* 헤더 */
+#head {
+	position: fixed;
+    top: 0px;
+    background-color: #fff;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.08);
+    height: 62px;
+    transition: background-color 200ms;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#head > nav {
+	width: 100%;
+	height: 100%;
+}
+
+.headmargin {
+	position: relative;
+	max-width: 1320px;
+	margin-right: auto;
+   	margin-left: auto;
+   	height: 100%;
+}
+
+.headul {
+	display: flex;
+    align-items: center;
+    padding: 0;
+    padding-inline-start: 0;
+    margin: 0;
+    margin-block: 0 0;
+    margin-inline: 0;
+    list-style-type: none;
+    width: 100%;
+	height: 100%;
+}
+
+
+.headsearchsetting {
+    width: 300px;
+    flex-shrink: 1;
+    margin: 0 0 0 auto;
+    transition: all 0.5s;
+    height: 62px;
+    position: relative;
+    display: flex;
+	align-items: center;
+}
+
+.headsetting {
+	position: relative;
+    display: flex;
+	align-items: center;
+	height: 62px;
+	flex-shrink: 0;
+	margin: 0 0 0 10px;
+	width: 63px;
+}
+
+.headsearchsetting input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.headsetting {
+    margin-left: 10px;
+}
+
+.headsetting button {
+    padding: 0 0;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 200ms;
+    font-size: 13px;
+	font-stretch: 100%;
+}
+
+.headsetting button:hover {
+    pointer-events: none;
+}
+
+/* 센터 */
+.maincenter {
+	padding-top: 62px;
+	min-height: calc(100vh - 343px);
+}
+
+.follow-head {
+	/*position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;*/
+    width: 100%;
+    height: 85px;
+    padding: 0 16px;
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+}
+
+.backbutton {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px;
+}
+
+.back {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin: 10px 0;
+    color: #ff2f6e;
+    appearance: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    line-height: 0;
+    padding: 0;
+}
+
+.who-follow {
+	display: flex;
+    align-items: center;
+    height: 30px;
+    margin: 0 calc(var(--row-margin) - var(--header-padding)) 10px;
+    opacity: 1;
+    transition-timing-function: ease;
+    transition-duration: 150ms;
+    transform: translate3d(0, 0, 0);
+}
+
+.who-follow-size {
+	display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0;
+}
+
+.follow-list {
+	display: flex;
+    justify-content: center;
+	margin: 15px 0 0;
+}
+
+.li-setting {
+	padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.follow-person {
+	height: 104px;
+	display: flex;
+    align-items: center;
+    color: inherit;
+}
+
+.picture {
+    width: 71px;
+    height: 71px;
+    margin: 0 11px 0 0;
+    border: 0;
+    /*position: relative;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture-setting {
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*position: relative;*/
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.follow-person-content {
+	border-bottom: 1px solid #ededed;
+	display: flex;
+    flex: 1;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fpc-size {
+	display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.follow-name {
+    color: #292a32;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0;
+}
+
+.follow-intro {
+	margin-top: 4px;
+    overflow: hidden;
+    color: #8c8c8c;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0;
+}
+
+.following-button {
+	font-weight: 500;
+	color: #7e7e7e;
+	height: 28px;
+    padding: 0 11px 0 12px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    appearance: initial;
+    cursor: pointer;
+    background: none;
+    border: 0 none transparent;
+    outline: none 0;
+}

@@ -1,0 +1,498 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+/* 기본값 */
+* { 
+	box-sizing: border-box; 
+}
+
+.border { 
+	border: 1px solid red; 
+}
+
+body { 
+	height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+	width: 100%;
+    height: 100%;
+}
+
+a {
+	color: #141414;
+    text-decoration: none;
+    outline: #fff;
+}
+
+ul {
+	padding: 0;
+    padding-inline-start: 0;
+    margin: 0;
+    margin-block: 0 0;
+    margin-inline: 0;
+    list-style-type: none;
+}
+
+h4{
+	padding: 0;
+    margin: 0;
+}
+
+ol, ul {
+    padding: 0;
+    padding-inline-start: 0;
+    margin: 0;
+    margin-block: 0 0;
+    margin-inline: 0;
+    list-style-type: none;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+/* 헤더 */
+#head {
+	position: fixed;
+    top: 0px;
+    background-color: #fff;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.08);
+    height: 62px;
+    transition: background-color 200ms;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#head > nav {
+	width: 100%;
+	height: 100%;
+}
+
+.headmargin {
+	position: relative;
+	max-width: 1320px;
+	margin-right: auto;
+   	margin-left: auto;
+   	height: 100%;
+}
+
+.headul {
+	display: flex;
+    align-items: center;
+    padding: 0;
+    padding-inline-start: 0;
+    margin: 0;
+    margin-block: 0 0;
+    margin-inline: 0;
+    list-style-type: none;
+    width: 100%;
+	height: 100%;
+}
+
+
+.headsearchsetting {
+    width: 300px;
+    flex-shrink: 1;
+    margin: 0 0 0 auto;
+    transition: all 0.5s;
+    height: 62px;
+    position: relative;
+    display: flex;
+	align-items: center;
+}
+
+.headsetting {
+	position: relative;
+    display: flex;
+	align-items: center;
+	height: 62px;
+	flex-shrink: 0;
+	margin: 0 0 0 10px;
+	width: 63px;
+}
+
+.headsearchsetting input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.headsetting {
+    margin-left: 10px;
+}
+
+.headsetting button {
+    padding: 0 0;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 200ms;
+    font-size: 13px;
+	font-stretch: 100%;
+}
+
+.headsetting button:hover {
+    pointer-events: none;
+}
+
+/* 센터 */
+.maincenter {
+	padding-top: 62px;
+	min-height: calc(100vh - 343px);
+}
+
+.follow-head {
+	/*position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;*/
+    width: 100%;
+    height: 85px;
+    padding: 0 16px;
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+}
+
+.backbutton {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px;
+}
+
+.back {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin: 10px 0;
+    color: #ff2f6e;
+    appearance: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    line-height: 0;
+    padding: 0;
+}
+
+.who-follow {
+	display: flex;
+    align-items: center;
+    height: 30px;
+    margin: 0 calc(var(--row-margin) - var(--header-padding)) 10px;
+    opacity: 1;
+    transition-timing-function: ease;
+    transition-duration: 150ms;
+    transform: translate3d(0, 0, 0);
+}
+
+.who-follow-size {
+	display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0;
+}
+
+.arrow {
+	fill: #ff2f6e;
+	transform: scaleX(-1);
+}
+
+/* 코멘트 더보기 목록 형식 */
+
+.more_content {
+	width: 100%;
+	height: 100%;
+	padding-top: 62px;
+}
+.more_header {
+	width: 100%;
+	height: 85px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: #ededed;
+	border-top: #ededed;
+}
+.more_header_direction {
+	width: 1871px;
+	height: 44px;
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.direction_box {
+	width: 24px;
+	height: 44px;
+	display: flex;
+    align-items: center;
+}
+.arrow {
+	transform: scaleX(-1);
+	fill: #ff2f6e;
+	cursor: pointer;
+}
+.more_comment_box {
+	width: 1871px;
+	height: 30px;
+}
+.more_like_box {
+	width: 100%;
+	height: 48px;
+}
+.more_like_small_box {
+	width: 100%;
+	height: 48px;
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #d2d2d2;
+}
+.more_like {
+	width: 92.17px;
+	height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+}
+.more_like_select_box {
+	width: 130.17px;
+	height: 25px;
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.like_ul {
+	display: flex;
+    width: 100%;
+}
+
+.likebutton {
+	position: relative;
+    min-width: 167px;
+    padding: 13px 8px;
+    color: #7e7e7e;
+    text-align: center;
+    vertical-align: top;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    appearance: initial;
+    cursor: pointer;
+    background: none;
+    border: 0 none transparent;
+    outline: none 0;
+}
+
+.more_middle_header {
+	width: 100%;
+	height: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.more_middle_header2 {
+	width: 1863px;
+	height: auto;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.more_middle_content {
+	width: 640px;
+	height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+	overflow: hidden;
+	padding-top: 20px;
+}
+.more_dupl_div {
+	width: 640px;
+	height: auto;
+	margin-bottom: 20px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.more_dupl_top {
+	width: 616px;
+	height: 55px;
+	display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+.more_dupl_nick_box {
+	width: 543.47px;
+	height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.more_profile_img {
+	width: 32px;
+	height: 32px;
+	margin: 11px 8px 11px 0;
+	border-radius: 50%;
+}
+.more_user_nick {
+	width: auto;
+	height: 22px;
+	margin-bottom: 2px;
+}
+.more_dupl_star {
+	width: 56.53px;
+	height: 26px;
+	margin: 15px 0 0 16px;
+    border-radius: 13px;
+    border: 1px solid #ededed;
+    background-color: #fff;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.more_star_img {
+	width: 16px;
+	height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.more_star_number {
+	width: 20px;
+	height: 20px;
+	color: #5e5e64;
+	font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentdiv_setting {
+	display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 616px;
+}
+
+.movie_a {
+    width: 15.4%;
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 12px 12px 15px 0;
+}
+
+.movie_img {
+	width: 100%;
+}
+
+.movie_review_content {
+    flex: 1;
+}
+
+.movie_title {
+	font-weight: 500;
+	margin: 12px 0 2px;
+	color: #141414;
+	font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+}
+
+.movie_content {
+	margin: 0 0 7px;
+	color: #7e7e7e;
+	font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0;
+}
+
+.movie_realcontent {
+	font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 23px;
+    position: relative;
+    color: #5e5e64;
+    opacity: 1;
+    overflow: hidden;
+    white-space: pre-wrap;
+    transition: opacity 400ms;
+}
+
+.more_dupl_content {
+	width: 100%;
+	height: auto;
+    margin: 12px 0 15px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #5e5e64;
+    cursor: pointer;
+}
+.more_dupl_down {
+	width: 616px;
+	height: auto;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	color: #5e5e64;
+	border-top: 1px solid #e0e0e0;
+	font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+}
+.more_like_button {
+	width: 616px;
+	height: auto;
+	padding: 9.5px 0;
+	border-top: 1px solid #e0e0e0;
+    color: #ff2f6e;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0;
+}
