@@ -4,9 +4,66 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link rel= "stylesheet" href="css/WatchaPedia_MyComment.css"/>
+	
+	<!-- jQuery 사용 --><script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			$(".more_like").click(function(){
+				$(".arr_main_screen").css("display", "flex");
+				$("#root").css("display", "block");
+			});
+			$(".arr_button").click(function(){
+				$(".arr_main_screen").css("display", "none");
+				$("#root").css("display", "flex");
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id = "root">
+	<!-- 좋아요 순 클릭 시 -->
+		<div class="arr_main_screen">
+			<div class="arr_box">
+				<div class="arr_title">
+					<div class="arr_text">
+						정렬 기준
+					</div>
+					<div class="arr_button">
+						<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+					</div>
+				</div>
+				
+				
+				
+				<!-- 반복 구간 시작 -->
+				<div class="arr_type_box">
+					<div class="arr_type">
+						<div class="arr_type_text">좋아요 순</div>
+						<div class="arr_arrow">
+							✔️
+						</div>
+					</div>
+				</div>
+				<!-- 반복 구간 끝 -->
+				
+				
+				
+				<!-- 반복 구간 시작 -->
+				<div class="arr_type_box">
+					<div class="arr_type">
+						<div class="arr_type_text">작성 순</div>
+						<div class="arr_arrow">
+							✔️
+						</div>
+					</div>
+				</div>
+				<!-- 반복 구간 끝 -->
+				
+				
+				
+			</div>
+		</div>
+	<!-- 좋아요 순 클릭 시 여기까지 -->
 		<header id= "head">
 			<nav>
 				<section class= "headmargin">
