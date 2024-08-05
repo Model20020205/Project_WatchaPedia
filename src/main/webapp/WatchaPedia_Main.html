@@ -2,11 +2,167 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>왓챠피디아</title>
-	<link rel= "stylesheet" href="css/WatchaPedia_Main.css"/>
+	<title>왓챠피디아 메인 페이지</title>
+	<link rel= "stylesheet" href="WatchaPedia_Main.css"/>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<!-- jQuery 사용 -->
+	<script>
+		$(function(){
+			$(".headul .headsetting:nth-child(3)").click(function(){	// 로그인 창 생성
+				$(".login_main_screen").css("display", "flex");
+				$(".root").css("display", "block");
+			});
+			$(".login_main_screen").click(function(){	// 로그인 창 닫기
+				$(".login_main_screen").css("display", "none");
+			});
+			$(".headul .headsetting:nth-child(4)").click(function(){	// 회원가입 창 생성
+				$(".register_main_screen").css("display", "flex");
+				$(".root").css("display", "block");
+			});
+			$(".register_main_screen").click(function(){	// 회원가입 창 닫기
+				$(".register_main_screen").css("display", "none");
+				$(".root").css("display", "flex");
+			});
+		});
+	</script>
 </head>
 <body>
 	<div id= "root">
+		
+	<!-- 회원가입 여기서부터 시작 -->
+	<div class="register_main_screen">
+		<div class="login_box">
+			<div class="login_inner">
+				<div class="login_header">
+					<img class="register_img" src="img/watcha.png">
+				</div>
+				<div class="login_word">회원가입</div>
+				<div class="input_box">
+					<div class="input_inner">
+						<div class="input_inner_box">
+							<div class="input_ep">
+								<input class="input_text" type="text" placeholder="이름" />
+							</div>
+							<div class="input_ep">
+								<input class="input_text" type="text" placeholder="이메일" />
+							</div>
+							<div class="input_ep">
+								<input class="input_text" type="text" placeholder="비밀번호" />
+							</div>
+							<div class="login_button_box">
+								<button class="login_button">
+									회원가입
+								</button>
+							</div>
+						</div>
+						<div class="account_ask">
+							<div class="account_box">
+								이미 가입하셨나요?
+							</div>
+							<button class="register_ask">
+								로그인
+							</button>
+						</div>
+						<div class="hr_line_box">
+							<hr class="hr_line">
+							<div class="line_word">
+								OR
+							</div>
+							<hr class="hr_line">
+						</div>
+						<div class="social_login">
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialKakao.444bf93dafbd611eb4d1.svg?as-resource">
+							</div>
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialGoogle.a946248e0b9a978c9f77.svg?as-resource">
+							</div>
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialTwitter.cc596d57b16f837b9729.svg?as-resource">
+							</div>
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialApple.484c0da1e6a00a23e23f.svg?as-resource">
+							</div>
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialLine.7f8a1fd121c282009db6.svg?as-resource">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 회원가입 여기서부터 끝 -->
+	
+	<!-- 로그인 여기서부터 -->
+	<div class="login_main_screen">
+		<div class="login_box">
+			<div class="login_inner">
+				<div class="login_header">
+					<img src="img/watcha.png">
+				</div>
+				<div class="login_word">로그인</div>
+				<div class="input_box">
+					<div class="input_inner">
+						<div class="input_inner_box">
+							<div class="input_ep">
+								<input class="input_text" type="text" placeholder="이메일" />
+							</div>
+							<div class="input_ep">
+								<input class="input_text" type="text" placeholder="비밀번호" />
+							</div>
+							<div class="login_button_box">
+								<button class="login_button">
+									로그인
+								</button>
+							</div>
+						</div>
+						<div class="pw_ask">
+							비밀번호를 잊어버리셨나요?
+						</div>
+						<div class="account_ask">
+							<div class="account_box">
+								계정이 없으신가요?
+							</div>
+							<button class="register_ask">
+								회원가입
+							</button>
+						</div>
+						<div class="hr_line_box">
+							<hr class="hr_line">
+							<div class="line_word">
+								OR
+							</div>
+							<hr class="hr_line">
+						</div>
+						<div class="social_login">
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialKakao.444bf93dafbd611eb4d1.svg?as-resource">
+							</div>
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialGoogle.a946248e0b9a978c9f77.svg?as-resource">
+							</div>
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialTwitter.cc596d57b16f837b9729.svg?as-resource">
+							</div>
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialApple.484c0da1e6a00a23e23f.svg?as-resource">
+							</div>
+							<div class="social_img">
+								<img src="https://an2-ast.amz.wtchn.net/ayg/images/icSocialLine.7f8a1fd121c282009db6.svg?as-resource">
+							</div>
+						</div>
+						<div class="info_text">
+							TIP.왓챠 계정이 있으신가요? 왓챠와 왓챠피디아는
+							같은 계정을 사용해요.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 로그인 여기까지 -->
+		
 		<header id= "head">
 			<nav>
 				<section class= "headmargin">
