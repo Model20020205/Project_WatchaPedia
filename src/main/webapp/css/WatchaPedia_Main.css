@@ -446,6 +446,7 @@ body {
     left: 0;
     width: 100%;
     text-align: center;
+    z-index: 1000;
 }
 
 #head > nav {
@@ -529,6 +530,8 @@ input:focus {
 .maincenter {
 	padding-top: 86px;
 	min-height: calc(100vh - 343px);
+	z-index: 500;
+	position: relative;
 }
 
 .centercontent {
